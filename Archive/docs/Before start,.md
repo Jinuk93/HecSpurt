@@ -52,6 +52,7 @@
 ### 서류지원
 
 ![Untitled 2](https://user-images.githubusercontent.com/80089860/162188284-92f3b154-5541-4db8-a2bd-f891d5786abe.png)
+
 ***큰 기대도 없던지라, 처음에는 자소서도 안쓰고 제출한 멍청이다. 채용설명회 듣고 부랴부랴 작성했다***
 
 ### 서류합격 후 안내
@@ -84,6 +85,8 @@
 
 ![강하게살아야겠다](https://user-images.githubusercontent.com/80089860/162188401-a37c670d-26bf-47db-9099-f1a11daef52a.jpg)
 
+***ㅈㄴ강하게 외유내강, Dok2 를 갖고 살자***
+
 ### 합격후기
 
 - 이 과정을 지원하면서 과열된 경쟁률이 합격에 대한 기대치를 낮추었다. 
@@ -100,3 +103,5 @@
 ![Untitled 10](https://user-images.githubusercontent.com/80089860/162188566-1ac05ff6-3364-4cb8-8832-466e0dbd6aab.png)
 
 ![Untitled 11](https://user-images.githubusercontent.com/80089860/162188572-e1a5a3fe-bb58-4175-9c8d-409d20dc3b3a.png)
+
+***❤️❤️❤️ 다들 감사합니다 ❤️❤️❤️***
