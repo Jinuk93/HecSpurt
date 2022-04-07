@@ -34,29 +34,29 @@
 
 - 우선, 헥스퍼트는 사람인 잡코리아 이렇게 두 군데서 교육생을 모집하였다
     - *사람인 및 잡코리아 지원자 통계*
+  
+![Untitled](https://user-images.githubusercontent.com/80089860/162188236-7fc9275d-5abd-4e9d-8e01-e4329835d9bb.png)
 
-![Untitled](%E1%84%92%E1%85%A6%E1%86%A8%E1%84%89%E1%85%B3%E1%84%91%E1%85%A5%E1%84%90%E1%85%B3%E1%84%85%202ef73/Untitled.png)
+![Untitled 1](https://user-images.githubusercontent.com/80089860/162188241-f6f3c67a-8248-4798-bd09-463876e9f5cd.png)
 
-![Untitled](%E1%84%92%E1%85%A6%E1%86%A8%E1%84%89%E1%85%B3%E1%84%91%E1%85%A5%E1%84%90%E1%85%B3%E1%84%85%202ef73/Untitled%201.png)
-
-![곰받네.jpg](%E1%84%92%E1%85%A6%E1%86%A8%E1%84%89%E1%85%B3%E1%84%91%E1%85%A5%E1%84%90%E1%85%B3%E1%84%85%202ef73/%EA%B3%B0%EB%B0%9B%EB%84%A4.jpg)
+![곰받네](https://user-images.githubusercontent.com/80089860/162188259-97b0e20d-c7b5-4f6e-a602-21264984dbb2.jpg)
 
 ***교육생 뽑는건데, 경쟁률 곰반데...***
 
 ### 서류지원
 
-![Untitled](%E1%84%92%E1%85%A6%E1%86%A8%E1%84%89%E1%85%B3%E1%84%91%E1%85%A5%E1%84%90%E1%85%B3%E1%84%85%202ef73/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/80089860/162188284-92f3b154-5541-4db8-a2bd-f891d5786abe.png)
 
 ### 서류합격 후 안내
 
-![Untitled](%E1%84%92%E1%85%A6%E1%86%A8%E1%84%89%E1%85%B3%E1%84%91%E1%85%A5%E1%84%90%E1%85%B3%E1%84%85%202ef73/Untitled%203.png)
+![Untitled 3](https://user-images.githubusercontent.com/80089860/162188318-cb584cc2-0eca-4252-95e5-e32a5b02b789.png)
 
 - 서류를 합격하고, 인적성 검사, 코딩테스트, 설문조사, 면접을 동시에 진행한다
 - 보통은 위의 절차에 대해 합격하고, 면접을 진행하는데 미리 면접날짜를 안내해준다
 
 ### 면접안내
 
-![Untitled](%E1%84%92%E1%85%A6%E1%86%A8%E1%84%89%E1%85%B3%E1%84%91%E1%85%A5%E1%84%90%E1%85%B3%E1%84%85%202ef73/Untitled%204.png)
+![Untitled 4](https://user-images.githubusercontent.com/80089860/162188353-96d9d3a8-5aae-4180-950b-5629fec86ce8.png)
 
 ### 면접 후기
 
@@ -73,23 +73,23 @@
 
 ### 최종합격
 
-![Untitled](%E1%84%92%E1%85%A6%E1%86%A8%E1%84%89%E1%85%B3%E1%84%91%E1%85%A5%E1%84%90%E1%85%B3%E1%84%85%202ef73/Untitled%205.png)
+![Untitled 5](https://user-images.githubusercontent.com/80089860/162188381-411e8b62-8665-4417-a37d-e4c208f1d12f.png)
 
-![강하게살아야겠다.jpg](%E1%84%92%E1%85%A6%E1%86%A8%E1%84%89%E1%85%B3%E1%84%91%E1%85%A5%E1%84%90%E1%85%B3%E1%84%85%202ef73/%EA%B0%95%ED%95%98%EA%B2%8C%EC%82%B4%EC%95%84%EC%95%BC%EA%B2%A0%EB%8B%A4.jpg)
+![강하게살아야겠다](https://user-images.githubusercontent.com/80089860/162188401-a37c670d-26bf-47db-9099-f1a11daef52a.jpg)
 
 ### 합격후기
 
 - 이 과정을 지원하면서 과열된 경쟁률이 합격에 대한 기대치를 낮추었다. 
 그러기에, 주변의 몇몇 사람들에게만 합격 소식을 알렸는데, 하나같이 자기 일처럼 크게 기뻐해 주었다. 정말 감사한 일이 아닐 수가 없는데, 다들 사랑합니다😍
 
-![Untitled](%E1%84%92%E1%85%A6%E1%86%A8%E1%84%89%E1%85%B3%E1%84%91%E1%85%A5%E1%84%90%E1%85%B3%E1%84%85%202ef73/Untitled%206.png)
+![Untitled 6](https://user-images.githubusercontent.com/80089860/162188506-7e3a966b-c212-4a3e-9dac-3e42fad4ac9b.png)
 
-![Untitled](%E1%84%92%E1%85%A6%E1%86%A8%E1%84%89%E1%85%B3%E1%84%91%E1%85%A5%E1%84%90%E1%85%B3%E1%84%85%202ef73/Untitled%207.png)
+![Untitled 7](https://user-images.githubusercontent.com/80089860/162188523-a2d650ae-57fe-455a-9729-3a1bb69c65a7.png)
 
-![Untitled](%E1%84%92%E1%85%A6%E1%86%A8%E1%84%89%E1%85%B3%E1%84%91%E1%85%A5%E1%84%90%E1%85%B3%E1%84%85%202ef73/Untitled%208.png)
+![Untitled 8](https://user-images.githubusercontent.com/80089860/162188544-b94a5948-2405-463e-9815-90baa834b7c9.png)
 
-![Untitled](%E1%84%92%E1%85%A6%E1%86%A8%E1%84%89%E1%85%B3%E1%84%91%E1%85%A5%E1%84%90%E1%85%B3%E1%84%85%202ef73/Untitled%209.png)
+![Untitled 9](https://user-images.githubusercontent.com/80089860/162188555-e8731746-33c2-49f3-934b-5cccb62666df.png)
 
-![Untitled](%E1%84%92%E1%85%A6%E1%86%A8%E1%84%89%E1%85%B3%E1%84%91%E1%85%A5%E1%84%90%E1%85%B3%E1%84%85%202ef73/Untitled%2010.png)
+![Untitled 10](https://user-images.githubusercontent.com/80089860/162188566-1ac05ff6-3364-4cb8-8832-466e0dbd6aab.png)
 
-![Untitled](%E1%84%92%E1%85%A6%E1%86%A8%E1%84%89%E1%85%B3%E1%84%91%E1%85%A5%E1%84%90%E1%85%B3%E1%84%85%202ef73/Untitled%2011.png)
+![Untitled 11](https://user-images.githubusercontent.com/80089860/162188572-e1a5a3fe-bb58-4175-9c8d-409d20dc3b3a.png)
