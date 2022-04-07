@@ -4,4 +4,4 @@
 
 ## 포스팅
 
--[최종합격 후기](https://github.com/Jinuk93/HecSpurt/blob/master/Archive/docs/Before%20start%2C.md)
+- [최종합격 후기](https://github.com/Jinuk93/HecSpurt/blob/master/Archive/docs/Before%20start%2C.md)
