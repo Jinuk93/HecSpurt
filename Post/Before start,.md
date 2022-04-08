@@ -86,6 +86,7 @@
 ### 최종합격
 
 ![Untitled 5](https://user-images.githubusercontent.com/80089860/162263117-35f58335-0e47-4ac9-8555-e2634d835c76.png)
+![강하게살아야겠다](https://user-images.githubusercontent.com/80089860/162418784-7757f8b5-18da-4852-83b7-c9f0b8e78016.jpg)
 
 ***ㅈㄴ강하게 외유내강, Dok2 를 갖고 살자***
 
