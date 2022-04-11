@@ -23,17 +23,10 @@
 |---|---|
 
 ### ***STEP 1***
-- ### Java
-- ### Java Network
-- ### Oracle
+- ***Java, Java Network, Oracle***
 
 ### ***STEP 2***
-- ### Servlet/JSP
-- ### HTML5/CSS3
-- ### JavaScript
-- ### Ajax/JSON
-- ### Node.js
-- ### SpringFramework
+- ***Servlet/JSP, HTML5/CSS3, JavaScript, Ajax/JSON, Node.js, SpringFramework***
 
 ## 2️⃣ ***Project course***
 
