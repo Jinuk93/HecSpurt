@@ -23,6 +23,7 @@
 |기간|2022.04.11 - 2022.00.00|
 |---|---|
 
+- 1단계 : Java, Java Network, Oracle
 
 
 ### 2️⃣ ***Project course***
