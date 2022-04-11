@@ -12,6 +12,7 @@
 ## Post
 - [교육과정](https://github.com/Jinuk93/HecSpurt/blob/master/Post/curriculum.md)
 - [최종합격 후기](https://github.com/Jinuk93/HecSpurt/blob/master/Post/Before%20start%2C.md)
+- [OT](https://github.com/Jinuk93/HecSpurt/blob/master/Post/OT.md)
 
 ## Archive
 
