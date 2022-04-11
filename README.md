@@ -28,6 +28,14 @@
 - ### Java Network
 - ### Oracle
 
+### ***STEP 2***
+- ### Servlet/JSP
+- ### HTML5/CSS3
+- ### JavaScript
+- ### Ajax/JSON
+- ### Node.js
+- ### SpringFramework
+
 ## 2️⃣ ***Project course***
 
 |기간|2022.00.00 - 2022.00.00|
