@@ -5,22 +5,19 @@ package day1;
 
 public class Hello {
 
-	public static int sum(int n, int m) { //int n, int m은 
-		return n + m ;
-	//int n, int m 매개변수 parameter할 때 받을 수 있는 값,매개변수==인수=parameter=argument
-	//return : 호출한 곳에다가 값을 전달
-	//return 문을 만나게되면 sum 메소드는 종료된다 ( 밑에 메소드들이 더 있다고하더라도! )
+	public static int sum(int n, int m) { //int n, int m은 매개변수
+										  // 매개변수 == 인수 == parameter == argument
+		return n + m ; // 호출한 곳으로 값을 전달
+					   // return 문을 만나는 순간, sum 메소드 들은 종료된다 (밑에 메소드가 있더라도)
 }
-
-	//main() 메소드에서 실행 시작
-	public static void main(String[] args) {
-		int i = 20; //20은 리터럴 상수 , 초기화 시켜줌(데이터 저장)
-		int s; // int 는 data type이다. int는 정수형 타입
-		char a; // char 한 문자형, ' ' (싱글 따옴표), 긴 것은 String
+	public static void main(String[] args) { // 클래스 실행 시, main() 메소드가 우선적으로 실행된다
+		int i = 20; // 20은 리터럴 상수
+		int s; // int 는 data type이고, int는 정수형 타입이다
+		char a; // char '하나의' 문자형 type이고, ''(싱글 따옴표)를 쓴다. 긴 문자열은 String type
 	
-		s = sum(i, 10); // sum() 메소드 호출에서 return 값으로 받아옴,
+		s = sum(i, 10); // sum()메소드를 호출한다 -> return 메소드를 통해 값을 받아온다.
 		a = '?';
-		System.out.println(a); //문자 "?"화면 출력
+		System.out.println(a); // 문자 "?"화면 출력
 		System.out.println("Hello"); // "Hello" 문자열 화면출력, String 문자열 타입의 데이터
 		System.out.println(s); // 정수 s 값 화면 출력
 	}
