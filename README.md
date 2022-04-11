@@ -18,15 +18,15 @@
 
 ### ***🌼 22.4.11 - 22.7.29 🌼***
 
-### 1️⃣ ***Basic course*** 
+## 1️⃣ ***Basic course*** 
 
 |기간|2022.04.11 - 2022.00.00|
 |---|---|
 
-- 1단계 : Java, Java Network, Oracle
+### Step1. Java, Java Network, Oracle
 
 
-### 2️⃣ ***Project course***
+## 2️⃣ ***Project course***
 
 |기간|2022.00.00 - 2022.00.00|
 |---|---|
