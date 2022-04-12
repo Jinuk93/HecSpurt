@@ -1,7 +1,7 @@
 /*
 exam 2-1. Hello 자바 프로그램의 기본 구조 
 */
-package day1;
+package ch01;
 
 public class Hello {
 

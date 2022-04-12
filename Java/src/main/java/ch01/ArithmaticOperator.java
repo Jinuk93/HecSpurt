@@ -1,7 +1,7 @@
 /*
 exam 2-5. /와 % 산술 연살자 응용
 */
-package day1;
+package ch01;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package day1;
+package ch01;
 
 public class LogicalOperator {
 

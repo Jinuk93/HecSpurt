@@ -1,7 +1,7 @@
 /*
 exam 2-3. 타입 변환
 */
-package day1;
+package ch01;
 
 public class TypeConversion {
 

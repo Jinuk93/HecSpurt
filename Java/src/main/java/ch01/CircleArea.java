@@ -2,7 +2,7 @@
 exam 2-2. 리터럴, 상수 사용하기
 문제 : 원의 면적을 구하는 프로그램을 작성하라 
 */
-package day1;
+package ch01;
 
 public class CircleArea {
 
