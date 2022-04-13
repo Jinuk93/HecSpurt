@@ -17,7 +17,7 @@
 
 ## Archive
 
-### 📚 [헥스퍼트 아카데미 스터디]()
+### 📚 [헥스퍼트 아카데미 스터디](https://github.com/Jinuk93/HecSpurt/blob/master/Study/README.md)
   - ### 목표
     - Spring Framework 학습
     - 과제 수행
