@@ -18,10 +18,12 @@
 ## Archive
 
 ### 📚 [헥스퍼트 아카데미 스터디](https://github.com/Jinuk93/HecSpurt/blob/master/Study/README.md)
-  - ### 목표를 통해 알아보는 스터디 소개
+  - ***목표를 통해 알아보는 스터디 소개***
     - Spring Framework 학습
     - 과제 수행
     - Test 준비
+ 
+  - ***STEP 1 기간동안 스터디를 진행한다***
 
 ---
  
