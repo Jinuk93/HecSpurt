@@ -13,6 +13,8 @@
 - [최종합격 후기](https://github.com/Jinuk93/HecSpurt/blob/master/Post/Before%20start%2C.md)
 - [교육과정 및 일정](https://github.com/Jinuk93/HecSpurt/blob/master/Post/curriculum.md)
 
+---
+
 ## Archive
 
 ### 📚 [헥스퍼트 아카데미 스터디]()
