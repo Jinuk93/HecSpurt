@@ -8,11 +8,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-
 /*
 Buffer(임시저장소)를 제공하는 filter 클래스
- */
-
+*/
 public class BufferedFileCopy {
 	public static void main(String[] args) throws IOException {
 		//1단계 : 스트림 생성(입,출력)
