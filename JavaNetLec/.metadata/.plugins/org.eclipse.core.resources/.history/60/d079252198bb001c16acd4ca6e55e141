@@ -1,5 +1,0 @@
-package fileio.ex05.databuffer;
-
-public class DataBufferedFilterStream {
-
-}

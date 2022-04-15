@@ -1,7 +1,0 @@
-package fileio.ex02.bufferfilecopy;
-
-public class BufferFileCopy {
-	public static void main(String[] args) {
-		
-	}
-}

@@ -1,5 +1,0 @@
-package net.ex06.multithreadclient;
-
-public class EchoLoopClient {
-
-}

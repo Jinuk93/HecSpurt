@@ -1,9 +1,0 @@
-package thread.ex03.threadex;
-
-
-
-public class ThreadEx {
-	public static void main(String[] args) {
-		
-	}
-}

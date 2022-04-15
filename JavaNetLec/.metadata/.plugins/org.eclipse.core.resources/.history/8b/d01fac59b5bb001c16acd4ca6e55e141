@@ -1,7 +1,0 @@
-package thread.ex05.threadneedjoin;
-
-public class ThreadNeedJoin {
-	public static void main(String[] args) {
-		
-	}
-}

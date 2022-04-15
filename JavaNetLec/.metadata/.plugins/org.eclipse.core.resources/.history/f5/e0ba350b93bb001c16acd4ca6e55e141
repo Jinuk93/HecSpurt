@@ -1,8 +1,0 @@
-package fileio.ex03.datafilterstream;
-
-public class DataFilterStream {
-	public static void main(String[] args) {
-		// 1단계
-		OutputStream out = new FileOutputStream("MyData.bin");
-	}
-}
