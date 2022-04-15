@@ -71,7 +71,5 @@ public class EchoServer {
 		pw.close();
 		br.close();
 		System.out.println("client - server Ended!");
-	
 	}
-	
 }

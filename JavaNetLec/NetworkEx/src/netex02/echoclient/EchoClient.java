@@ -2,7 +2,11 @@ package netex02.echoclient;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
@@ -24,7 +28,44 @@ public class EchoClient {
 		// 2. 소켓 생성자에서 연결스트림이 생성되었으므로 통신가능
 		//	  서버에 전송할 문자열을 입력받기 위해 입력 개체 생성
 		InputStreamReader ink = new InputStreamReader(System.in);
-		BufferedReader keyboard = new BufferedReader(ink);
+		BufferedReader keyboard = new BufferedReader(ink); //스캐너를 사용해도 된다
 		
+		// 3. 소켓 객체로부터 송수신 스트림 얻기
+		OutputStream out = clientSocket.getOutputStream();
+		OutputStreamWriter outW = new OutputStreamWriter(out);
+		PrintWriter pw = new PrintWriter(outW);
+		
+		InputStream in = clientSocket.getInputStream();
+		InputStreamReader inR = new InputStreamReader(in);
+		BufferedReader br = new BufferedReader(inR);
+		
+		// 4. 사용자가 입력한 데이터를 서버로 전송하고,
+		// 서버가 echo한 데이터를 수신해서 콘솔에 보여준다
+		// 이것을 quit가 입력되기 전까지 반복한다
+		while(true) {
+			// 사용자 입력
+			System.out.println("input >> ");
+			String line = keyboard.readLine();
+			if(line.equals("quit")) {
+				System.out.println("Client Ended!!");
+				break;
+			}
+			// 서버로 전송
+			System.out.println("Server Sended : " + line);
+			pw.println(line);
+			pw.flush();
+			
+			// 서버의 echo데이터 수신
+			String echo = br.readLine();
+			if(echo == null) {
+				System.out.println("Server Ended!!");
+				break;
+			}
+			System.out.println("Received Server : " + echo);	
+		}
+			// 5. 스트림 연결 종료
+			pw.close();
+			br.close();
+			System.out.println("Client - server Ended!!");
 	}
 }
