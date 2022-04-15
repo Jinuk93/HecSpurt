@@ -1,0 +1,29 @@
+package fileio.ex09.bufferedreader;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.Reader;
+
+public class StringBufferedReader {
+	public static void main(String[] args) {
+		Reader in = new FileReader("String.txt");
+		BufferedReader bIn = new BufferedReader(in);
+		
+		while(true) {
+			String str = bIn.readLine();
+			if(str == null)
+				break;
+			System.out.println(str);
+		}
+		
+		bIn.close();
+	}
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,5 @@
+package net.ex08.cmdpacketclient;
+
+public class CmdPacketClient {
+
+}

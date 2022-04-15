@@ -1,0 +1,44 @@
+package thread.ex03.threadex;
+
+class Study extends Thread{
+
+	@Override
+	public void run() {
+		for(int i=0;i<10;i++) {
+			System.out.println("study...");
+			Thread.sleep(300);
+		}
+	}
+	
+}
+
+class Music extends Thread{
+
+	@Override
+	public void run() {
+		for(int i=0;i<10;i++) {
+			System.out.println("music...");
+			Thread.sleep(300);
+		}
+	}
+	
+}
+
+public class ThreadEx {
+	public static void main(String[] args) {
+		Study study = new Study();
+		Music music = new Music();
+		study.start();	// study 스레드가 run()을 동작시킨다.
+		music.start();	// music 스레드가 run()을 동작시킨다.
+	}
+}
+
+
+
+
+
+
+
+
+
+

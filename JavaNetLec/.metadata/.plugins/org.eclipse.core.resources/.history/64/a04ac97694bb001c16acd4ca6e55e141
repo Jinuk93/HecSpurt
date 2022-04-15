@@ -1,0 +1,5 @@
+package fileio.ex04.bufferstream;
+
+public class BufferedFileCopy {
+
+}

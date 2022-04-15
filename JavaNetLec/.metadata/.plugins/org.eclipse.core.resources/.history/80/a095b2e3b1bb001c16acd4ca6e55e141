@@ -1,0 +1,20 @@
+package thread.ex04.threadimplements;
+
+class Parent{
+	public void info() {
+		System.out.println("parent class");
+	}
+}
+
+public class ThreadImplements {
+
+}
+
+
+
+
+
+
+
+
+

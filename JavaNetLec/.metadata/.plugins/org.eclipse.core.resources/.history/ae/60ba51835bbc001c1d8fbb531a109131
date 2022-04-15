@@ -1,0 +1,40 @@
+package net.ex04.fileclient;
+
+import java.io.IOException;
+import java.net.Socket;
+import java.net.UnknownHostException;
+
+//1) 서버에 접속
+//2) 사용자로부터 파일명 입력
+//3) 입력받은 파일명 서버로 전송
+//4) 새로운 파일명을 정해서 파일저장
+//5) 전송완료되면 접속 해제
+
+public class FileClient {
+	public static void main(String[] args) {
+		String ip = "127.0.0.1";
+		int port = 9000;
+		try {
+			//1) 서버의 주소를 부여한 소켓 생성(연결까지 완료)
+			Socket clientSocket = new Socket(ip, port);
+			
+			//2) 사용자로부터 파일명을 입력받기 위한 키보드 입력 객체 생성
+			
+		} catch (UnknownHostException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+

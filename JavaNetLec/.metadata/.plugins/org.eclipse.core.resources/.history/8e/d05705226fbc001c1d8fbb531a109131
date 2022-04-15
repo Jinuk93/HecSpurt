@@ -1,0 +1,25 @@
+package net.ex07.cmdpacketserver;
+
+import java.io.IOException;
+import java.net.InetAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class CmdPacketServer {
+	final static int PORT = 9000;
+	
+	public static void main(String[] args) {
+		try {
+			ServerSocket serverSocket = new ServerSocket(PORT);
+			
+			System.out.println("Wait client...");
+			Socket conSocket = serverSocket.accept();
+			
+			InetAddress inetAddr = conSocket.getInetAddress();
+			System.out.println("Connect " + inetAddr.getHostAddress());
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+}

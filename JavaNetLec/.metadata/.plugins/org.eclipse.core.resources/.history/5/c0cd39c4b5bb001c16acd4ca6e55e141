@@ -1,0 +1,29 @@
+package thread.ex05.threadneedjoin;
+
+class Sum implements Runnable{
+
+	int num=0;
+	int start, end;
+	
+	Sum(int start, int end){
+		this.start = start;
+		this.end = end;
+	}
+	
+	@Override
+	public void run() {
+		for(int i=start;i<=end;i++)
+			num += i;
+	}
+	
+	public int getNum() {
+		return this.num;
+	}
+	
+}
+
+public class ThreadNeedJoin {
+	public static void main(String[] args) {
+		
+	}
+}

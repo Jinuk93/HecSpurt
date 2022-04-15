@@ -1,3 +1,4 @@
-Jinuk
-hi
-there
+HelloWorld
+GoodMorning
+Fine
+Thanks

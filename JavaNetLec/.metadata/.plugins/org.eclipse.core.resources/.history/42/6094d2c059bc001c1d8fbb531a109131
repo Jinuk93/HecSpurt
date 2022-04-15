@@ -1,0 +1,32 @@
+package net.ex03.fileserver;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+//1. 클라이언트가 서버에 파일을 요청한다(파일 이름 전송)
+//2. 서버는 해당 파일을 연결한 후 클라이언트에 전송한다
+//3. 전송이 끝나면 통신을 해제한다
+
+public class FileServer {
+	public static void main(String[] args) {
+		try {
+			ServerSocket serverSocket = new ServerSocket(9000);
+			
+			System.out.println("Wait client...");
+			Socket conSocket = serverSocket.accept();
+			System.out.println("Connect client!");
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+}
+
+
+
+
+
+
+
+

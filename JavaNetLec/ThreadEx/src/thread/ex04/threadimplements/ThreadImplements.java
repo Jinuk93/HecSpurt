@@ -1,36 +1,41 @@
 package thread.ex04.threadimplements;
 
-class Work {
+class Work{
 	public void work() {
 		System.out.println("Work");
 	}
 }
+
 class Study extends Work implements Runnable{
+
 	@Override
 	public void run() {
-		for(int i=0; i<10; i++) {
+		for(int i=0;i<10;i++) {
 			System.out.println("study...");
 			try {
-				Thread.sleep(300);;
+				Thread.sleep(300);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-		}
+		}		
 	}	
 }
+
 class Music extends Work implements Runnable{
+
 	@Override
 	public void run() {
-		for(int i=0; i<10; i++) {
+		for(int i=0;i<10;i++) {
 			System.out.println("music...");
 			try {
-				Thread.sleep(300);;
+				Thread.sleep(300);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-		}
-	}
+		}			
+	}	
 }
+
 public class ThreadImplements {
 	public static void main(String[] args) {
 		Study study = new Study();
@@ -41,3 +46,12 @@ public class ThreadImplements {
 		tMusic.start();
 	}
 }
+
+
+
+
+
+
+
+
+

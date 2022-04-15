@@ -1,0 +1,14 @@
+package fileio.ex10.printwriterstream;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.PrintWriter;
+import java.io.Writer;
+
+public class PrintWriterStream {
+	public static void main(String[] args) {
+		Writer out = new FileWriter("print.txt");
+		BufferedWriter bOut = new BufferedWriter(out);
+		PrintWriter pOut = new PrintWriter(bOut);
+	}
+}

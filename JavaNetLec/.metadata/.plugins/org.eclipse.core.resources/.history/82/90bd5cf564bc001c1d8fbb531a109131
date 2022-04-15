@@ -1,0 +1,6 @@
+package net.ex06.multithreadclient;
+
+public class EchoLoopClient {
+	final String IP = "127.0.0.1";
+	final int PORT = 9000;
+}

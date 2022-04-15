@@ -1,0 +1,7 @@
+package fileio.ex07.charreaderstream;
+
+public class CharReaderStream {
+	public static void main(String[] args) {
+		
+	}
+}

@@ -10,20 +10,19 @@ import java.io.OutputStream;
 
 public class DataFilterStream {
 	public static void main(String[] args) throws IOException {
-		// 1´Ü°è
-		OutputStream out = new FileOutputStream("MyData.bin");
-		
-		// Ãâ·Â½ºÆ®¸² °´Ã¼¿Í °áÇÕÇÏ´Â ÇÊÅÍ½ºÆ®¸² °´Ã¼ »ı¼º == ÇÊÅÍ½ºÆ®¸² »ı¼º
+		// 1ë‹¨ê³„
+		OutputStream out = new FileOutputStream("MyData.bin");		
+		// ì¶œë ¥ìŠ¤íŠ¸ë¦¼ê°ì²´ì™€ ê²°í•©í•˜ëŠ” í•„í„°ìŠ¤íŠ¸ë¦¼ê°ì²´ ìƒì„±
 		DataOutputStream filterOut = new DataOutputStream(out);
-	
-		// 2´Ü°è
-		filterOut.writeInt(365);
-		filterOut.writeDouble(3.14); //ÇÊÅÍÀÇ ±â´É == µ¥ÀÌÅÍ¸¦ ÀúÀå?
 		
-		// 3´Ü°è
-		filterOut.close(); // ÀÌ ¸Ş¼­µå´Â out.close();ÀÇ ±â´Éµµ Æ÷ÇÔ
-	
-		/*À§¿¡¼­ ÀúÀåÇÑ Á¤¼ö°ª°ú ½Ç¼ö°ªÀ» ´Ù½Ã ÀĞ¾îº¸ÀÚ*/
+		// 2ë‹¨ê³„
+		filterOut.writeInt(365);
+		filterOut.writeDouble(3.14);
+		
+		// 3ë‹¨ê³„
+		filterOut.close();
+		
+		/*ìœ„ì—ì„œ ì €ì¥í•œ ì •ìˆ˜ê°’ê³¼ ì‹¤ìˆ˜ê°’ì„ ë‹¤ì‹œ ì½ì–´ë³´ì*/
 		InputStream in = new FileInputStream("MyData.bin");
 		DataInputStream filterIn = new DataInputStream(in);
 		
@@ -34,6 +33,13 @@ public class DataFilterStream {
 		
 		System.out.println("int = " + num);
 		System.out.println("double = " + dNum);
-
 	}
 }
+
+
+
+
+
+
+
+

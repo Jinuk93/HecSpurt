@@ -1,4 +1,4 @@
-package fileio.ex02.Bufferfilecopy;
+package fileio.ex02.bufferfilecopy;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -6,50 +6,56 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-/*ÆÄÀÏ ÀÔÃâ·Â,³×Æ®¿öÅ© Åë½Å 3´Ü°è
-1´Ü°è. ½ºÆ®¸² »ı¼º(ÀÔ,Ãâ·Â ½ºÆ®¸²) = open´Ü°è
-2´Ü°è. ÆÄÀÏº¹»çÇÏ±â
-3´Ü°è. ÀĞ°Å³ª ÀúÀåÇÏ±â = read/write´Ü°è
-4´Ü°è. ½ºÆ®¸² ´İ±â = close´Ü°è
-*/
+
 /*
-ÆÄÀÏ ÀÔÃâ·Â 3´Ü°è´Â µ¿ÀÏÇÏ´Ù
-´Ù¸¸ ÀĞ°Å³ª ÀúÀåÇÒ ¶§, ÀÏÁ¤ Å©±â ÀÌ»ó ¸¹ÀÌ ½ÃµµµÈ´Ù
-µû¶ó¼­ ¼Óµµ°¡ °³¼±µÇ´Â È¿°ú°¡ ÀÖ´Ù
- */
+íŒŒì¼ ì…ì¶œë ¥ 3ë‹¨ê³„ëŠ” ë™ì¼
+ë‹¤ë§Œ, ì½ê±°ë‚˜ ì €ì¥í•  ë•Œ ì¼ì • í¬ê¸° ì´ìƒ ë§ì´ ì‹œë„
+=> ì†ë„ê°€ ê°œì„ 
+*/
 public class BufferFileCopy {
 	public static void main(String[] args) throws IOException {
-		
-		// 1´Ü°è ½ºÆ®¸² »ı¼º
+		// 1ë‹¨ê³„ stream open
 		InputStream in = new FileInputStream("putty.exe");
 		OutputStream out = new FileOutputStream("futty.exe");
-		
-		// ¼³Á¤
-		int copyByte = 0; // ÀüÃ¼ ¸î¹ÙÀÌÆ® ÀĞ¾ú´Ï?(±â·ÏÇß´Ï)
-		int readLen = 0;  // ÇÑ¹ø ÀĞÀ» ‹š, ¾ó¸¶³ª ÀĞ¾ú´Ï?
-		byte[] buf = new byte[1024]; // ÆÄÀÏÀ» ÇÑ¹ø¿¡ 1024¸¸Å­ ÀĞ¾îµå¸± ÀúÀå¼Ò
-		//¾Õ¼­¹è¿î, class¿ÍÀÇ Â÷ÀÌÁ¡Àº ¹Ì¸® ÀĞÀ» ¼ö ÀÖ´Â Å©±â¸¦ ÁöÁ¤ÇÑ´Ù.
+		int copyByte = 0;	// ì „ì²´ ëª‡ë°”ì´íŠ¸ ì½ì—ˆë‹ˆ(ê¸°ë¡í–ˆë‹ˆ)?
+		int readLen = 0;	// í•œë²ˆ ì½ì„ ë•Œ ì–¼ë§ˆë‚˜ ì½ì—ˆë‹ˆ?
+		byte[] buf = new byte[1024];	// íŒŒì¼ì„ í•œë²ˆì— ì½ì–´ë“¤ì¼ ì €ì¥ì†Œ
 		
 		long sTime = System.currentTimeMillis();
-		// 2´Ü°è
+		// 2ë‹¨ê³„
 		while(true) {
-			//buf Å©±â¸¸Å­ ÀĞ±â¸¦ ½ÃµµÇÏµÇ, ½ÇÁ¦ ÀĞÀº Å©±â´Â readLenÀ¸·Î ÀúÀå½ÃÄÑ¶ó!
-			readLen = in.read(buf); //buf´Â 1024¸¸Å­ÀÇ Å©±â(¹è¿­)
-			if(readLen == -1) 
+			//bufí¬ê¸°ë§Œí¼ ì½ê¸°ë¥¼ ì‹œë„í•˜ë¼. ì‹¤ì œ ì½ì€ í¬ê¸°ëŠ” readLenì— ì €ì¥
+			readLen = in.read(buf);
+			if(readLen == -1)
 				break;
-			// ¹è¿­ÀÇ ½ÃÀÛÀ§Ä¡ (ÀÎµ¦½º 0)¿¡¼­ºÎÅÍ readLenÅ©±â¸¸Å­ ÀúÀåÇØ¶ó
+			// ë°°ì—´ì˜ ì‹œì‘ìœ„ì¹˜(ì¸ë±ìŠ¤ 0)ì—ì„œë¶€í„° readLení¬ê¸°ë§Œí¼ ì €ì¥í•´ë¼
 			out.write(buf, 0, readLen);
-			copyByte += readLen; // ½ÇÁ¦ ÀĞ¾îµå¸° ¹ÙÀÌÆ®
-			System.out.println("copyByte =" + readLen);
+			copyByte += readLen;
+			//System.out.println("copyByte =" + readLen);
 		}
 		
 		long eTime = System.currentTimeMillis();
 		
-		// 3´Ü°è
+		// 3ë‹¨ê³„
 		in.close();
 		out.close();
 		
-		System.out.println("Copy Bytes : " + copyByte );
+		System.out.println("Copy Bytes : " + copyByte);
 		System.out.println("Copy Times : " + (eTime-sTime));
+		
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

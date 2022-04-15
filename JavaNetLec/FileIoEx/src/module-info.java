@@ -1,3 +1,3 @@
 module FileIoEx {
-		requires java.se;
+	requires java.se;
 }

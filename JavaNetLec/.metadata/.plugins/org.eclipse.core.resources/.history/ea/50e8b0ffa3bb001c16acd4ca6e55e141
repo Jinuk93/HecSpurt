@@ -1,0 +1,7 @@
+package thread.ex02.nothread;
+
+public class NoThread {
+	public static void main(String[] args) {
+		
+	}
+}

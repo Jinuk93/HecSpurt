@@ -1,40 +1,68 @@
 package thread.ex06.threadjoin;
 
-class Sum implements Runnable {
+class Sum implements Runnable{
 
 	int num=0;
 	int start, end;
 	
-	Sum(int start, int end) {
+	Sum(int start, int end){
 		this.start = start;
 		this.end = end;
 	}
 	
 	@Override
 	public void run() {
-		for(int i=start; i<=end; i++) {
+		for(int i=start;i<=end;i++)
 			num += i;
-		}
 	}
+	
 	public int getNum() {
 		return this.num;
+	}	
+}
+
+public class ThreadJoin {
+	public static void main(String[] args) throws InterruptedException {
+		Sum sum0 = new Sum(1, 50);
+		Sum sum1 = new Sum(51, 100);
+		
+		Thread t0 = new Thread(sum0);
+		Thread t1 = new Thread(sum1);
+		t0.start();
+		t1.start();
+
+		
+		// t0/t1ìŠ¤ë ˆë“œì˜ ë™ì‘ì´ ë§ˆì¹ ë•Œê¹Œì§€ ëŒ€ê¸°í•œë‹¤
+		/*
+		1ë²ˆì§¸ sleepìœ¼ë¡œ ëŒ€ëµ ëŒ€ê¸°ì‹œê°„ì„ ì¤€ë‹¤.
+		í•˜ì§€ë§Œ, ì˜ˆìƒí•  ìˆ˜ ìˆëŠ” ìµœëŒ€ì‹œê°„ì„ ì¤˜ì•¼ í•˜ë¯€ë¡œ
+		ì„±ëŠ¥ì´ ì¢‹ì§€ ëª»í•˜ë‹¤
+		*/
+		/*
+		try {
+			Thread.sleep(10);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		*/
+		
+		/*
+		2ë²ˆì§¸ ìŠ¤ë ˆë“œ ê°ì²´ë‚´ì˜ run()ì´ ë¦¬í„´í•˜ë©´ jvmì€ ì‹ í˜¸ë¥¼ ë°›ê²Œ ëœë‹¤.
+		ì´ ì‹ í˜¸ë¥¼ ëŒ€ê¸°í•˜ëŠ” join()ì„ ì‚¬ìš©í•˜ë©´ ëœë‹¤.
+		mainìŠ¤ë ˆë“œëŠ” join()ì—ì„œ ì‹ í˜¸ê°€ ì˜¬ë•Œê¹Œì§€ ëŒ€ê¸°ìƒíƒœ
+		*/
+		t0.join();
+		t1.join();
+		System.out.println("1~100 = " + (sum0.getNum()+sum1.getNum()));
 	}
 }
-	public class ThreadJoin {
-		public static void main(String[] args) {
-			Sum sum0 = new Sum(1, 50);
-			Sum sum1 = new Sum(51, 100);
-			
-			Thread t0 = new Thread(sum0);
-			Thread t1 = new Thread(sum1);
-			t0.start();
-			t1.start();
-			
-			/*
-			¸ŞÀÎ ½º·¹µå¿Í t0,t1 ½º·¹µå´Â º°°³·Î µ¿ÀÛ. ±×·¯¹Ç·Î, t0,t1½º·¹µå¸¦ µ¿ÀÛ½ÃÅ°ÀÚ¸¶ÀÚ
-			¸ŞÀÎÀº ´ÙÀ½À» ÁøÇàÇÏ°í ÇÁ·Î¼¼½º¸¦ ¸¶¹«¸®ÇÑ´Ù
-			 */
-			
-			System.out.println("1~100 = " + (sum0.getNum()+sum1.getNum()));
-		} 
-	}
+
+
+
+
+
+
+
+
+
+

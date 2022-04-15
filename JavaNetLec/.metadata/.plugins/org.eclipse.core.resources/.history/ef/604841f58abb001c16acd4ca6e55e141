@@ -1,0 +1,5 @@
+package fileio.ex01;
+
+public class ByteFileCopy {
+
+}

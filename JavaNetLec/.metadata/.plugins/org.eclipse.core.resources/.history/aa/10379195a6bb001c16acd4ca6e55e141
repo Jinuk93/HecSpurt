@@ -1,0 +1,16 @@
+package thread.ex03.threadex;
+
+class Study{
+	
+}
+
+class Music{
+	
+}
+
+
+public class ThreadEx {
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,5 @@
+package fileio.ex08.bufferedwriter;
+
+public class StringBufferedWriter {
+
+}

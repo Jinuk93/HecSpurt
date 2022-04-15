@@ -1,0 +1,28 @@
+package thread.ex04.threadimplements;
+
+class Work{
+	public void info() {
+		System.out.println("Work");
+	}
+}
+
+class Study extends Parent{
+	
+}
+
+class Music extends Parent{
+	
+}
+
+public class ThreadImplements {
+
+}
+
+
+
+
+
+
+
+
+

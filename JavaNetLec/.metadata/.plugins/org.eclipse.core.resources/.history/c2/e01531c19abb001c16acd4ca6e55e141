@@ -1,0 +1,7 @@
+package fileio.ex06.charwriterstream;
+
+public class CharWriterStream {
+	public static void main(String[] args) {
+		
+	}
+}

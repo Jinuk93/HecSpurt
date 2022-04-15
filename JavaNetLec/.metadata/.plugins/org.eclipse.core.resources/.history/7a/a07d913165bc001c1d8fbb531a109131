@@ -1,0 +1,29 @@
+package net.ex06.multithreadclient;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.Socket;
+import java.net.UnknownHostException;
+
+public class EchoLoopClient {
+	final static String IP = "127.0.0.1";
+	final static int PORT = 9000;
+	
+	public static void main(String[] args) {
+		try {
+			Socket clientSocket = new Socket(IP, PORT);
+			
+			InputStreamReader inK = new InputStreamReader(System.in);
+			BufferedReader keyboard = new BufferedReader(inK);
+			
+		} catch (UnknownHostException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+}
+
+
+

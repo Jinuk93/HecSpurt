@@ -1,0 +1,7 @@
+package fileio.ex04.bufferstream;
+
+public class BufferedFileCopy {
+	public static void main(String[] args) {
+		
+	}
+}

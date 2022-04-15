@@ -1,0 +1,15 @@
+package net.ex02.echoclient;
+
+/*
+클라이언트는 서버보다 훨씬 단순하다
+1) 서버의 주소(ip, port)를 가지고 소켓 생성
+  => 생성자에서 connect를 진행함
+2) 객체가 생성되었다면 연결이 되었으므로 통신이 가능함
+3) 서버가 Echo서버이므로 클라이언트가 보낸 데이터를 그대로 돌려줌
+4) close()를 호출하면 연결된 스트림이 해제됨
+*/
+public class EchoClient {
+	public static void main(String[] args) {
+		
+	}
+}

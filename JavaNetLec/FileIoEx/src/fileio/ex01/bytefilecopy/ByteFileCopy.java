@@ -7,46 +7,51 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-/*ÆÄÀÏ ÀÔÃâ·Â,³×Æ®¿öÅ© Åë½Å 3´Ü°è
-1´Ü°è. ½ºÆ®¸² »ı¼º(ÀÔ,Ãâ·Â ½ºÆ®¸²) = open´Ü°è
-2´Ü°è. ÆÄÀÏº¹»çÇÏ±â
-3´Ü°è. ÀĞ°Å³ª ÀúÀåÇÏ±â = read/write´Ü°è
-4´Ü°è. ½ºÆ®¸² ´İ±â = close´Ü°è
-*/
+//íŒŒì…ì…ì¶œë ¥/ë„¤íŠ¸ì›Œí¬ í†µì‹  3ë‹¨ê³„
+//1. ìŠ¤íŠ¸ë¦¼ ìƒì„± open
+//2. ì½ê±°ë‚˜ ì €ì¥í•˜ê¸° read/write
+//3. ìŠ¤íŠ¸ë¦¼ ë‹«ê¸° close
+
 public class ByteFileCopy {
 	public static void main(String[] args) throws IOException {
-		//1´Ü°è. ½ºÆ®¸²»ı¼º = open ´Ü°è °úÁ¤ÀÌ ÀÏ¾î³­´Ù.
-		InputStream in = new FileInputStream("putty.exe"); //ÀÔ·Â ½ºÆ®¸² »ı¼º
-		OutputStream out = new FileOutputStream("aatty.exe"); //Ãâ·Â ½ºÆ®¸² »ı¼º
-		
-		int copyByte = 0; // ¾ó¸¶³ª ÀĞ¾ú´À³Ä ?
-		int byteData = 0; // 1¹ÙÀÌÆ®¸¦ ÀúÀåÇÒ ÀúÀå¼Ò
+		// 1ë‹¨ê³„ ìŠ¤íŠ¸ë¦¼ open ê³¼ì •ì´ ì¼ì–´ë‚œë‹¤.
+		InputStream in = new FileInputStream("putty.exe");
+		OutputStream out = new FileOutputStream("aatty.exe");
+		int copyByte = 0;  // ì–¼ë§ˆë‚˜ ì½ì—ˆëŠëƒ?
+		int byteData = 0;	 // 1ë°”ì´íŠ¸ë¥¼ ì €ì¥í•  ì €ì¥ì†Œ
 		/*
-		 * byteData´Â 1¹ÙÀÌÆ®¸¦ ÀúÀåÇÒ ÀúÀå¼Ò¶ó°í ÇÑ´Ù.
-		 * ¿Ö 1¹ÙÀÌÆ®¸¦ ÀúÀåÇÏ´À³Ä?
-		 * ÀĞÀ» ÇÔ¼öÀÇ µ¥ÀÌÅÍ°¡ ¾øÀ» ¶§, -1À» ¹İÈ¯ÇÏ´Âµ¥, -1À» ÀúÀåÇÏ±â À§ÇØ¼­ÀÌ´Ù
-		 */	
-		
-		// ½Ã°£ ÃøÁ¤À» À§ÇØ °è»êÇØº¸ÀÚ
+		í•¨ìˆ˜ê°€ ì½ì„ ë°ì´í„°ê°€ ì—†ì„ ë•Œ -1ì„ ë°˜í™˜í•˜ëŠ”ë°
+		byteëŠ” 0 ~ 255ê¹Œì§€ ë°–ì— í‘œí˜„í•  ìˆ˜ ì—†ìœ¼ë¯€ë¡œ
+		-1ì„ ì €ì¥í•˜ë ¤ë©´ intë¥¼ ì‚¬ìš©í•œë‹¤.
+		*/
+		// ì‹œê°„ ì¸¡ì •ì„ ìœ„í•´ ê³„ì‚°í•´ë³´ì
 		long sTime = System.currentTimeMillis();
 		System.out.println("copy file start!");
-		
-		// 2´Ü°è. ÆÄÀÏ º¹»çÇÏ±â
+		/*2ë‹¨ê³„ íŒŒì¼ë³µì‚¬í•˜ê¸°*/
 		while(true) {
 			byteData = in.read();
 			if(byteData == -1)
 				break;
 			out.write(byteData);
 			copyByte++;
+			//System.out.println(copyByte);
 		}
 		System.out.println("copy file end!");
 		long eTime = System.currentTimeMillis();
-	 
-		// 3´Ü°è. ½ºÆ®¸² ´İ±â
+		
+		// 3ë‹¨ê³„ ìŠ¤íŠ¸ë¦¼ ë‹«ê¸°
 		in.close();
 		out.close();
 		
-		System.out.println("copy Byte : " + copyByte);
-		System.out.println("copy Time : " + (eTime-sTime));
+		System.out.println("copy Bytes : " + copyByte);
+		System.out.println("copy Times : " + (eTime-sTime));
 	}
 }
+
+
+
+
+
+
+
+

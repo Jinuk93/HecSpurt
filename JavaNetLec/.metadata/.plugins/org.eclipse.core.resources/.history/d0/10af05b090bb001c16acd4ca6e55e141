@@ -1,0 +1,12 @@
+package fileio.ex02.bufferfilecopy;
+
+/*
+파일 입출력 3단계는 동일
+다만, 읽거나 저장할 때 일정 크기 이상 많이 시도
+=> 속도가 개선
+*/
+public class BufferFileCopy {
+	public static void main(String[] args) {
+		
+	}
+}

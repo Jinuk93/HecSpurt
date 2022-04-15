@@ -1,0 +1,31 @@
+package fileio.ex03.datafilterstream;
+
+import java.io.DataOutputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+
+public class DataFilterStream {
+	public static void main(String[] args) throws IOException {
+		// 1단계
+		OutputStream out = new FileOutputStream("MyData.bin");		
+		// 출력스트림객체와 결합하는 필터스트림객체 생성
+		DataOutputStream filterOut = new DataOutputStream(out);
+		
+		// 2단계
+		filterOut.writeInt(365);
+		filterOut.writeDouble(3.14);
+		
+		// 3단계
+		filterOut.close();
+	}
+}
+
+
+
+
+
+
+
+

@@ -10,21 +10,17 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-/*
-
-*/
 public class DataBufferedFilterStream {
 	public static void main(String[] args) throws IOException {
-		
+		// íŒŒì¼ì— ê¸°ë¡
 		OutputStream out = new FileOutputStream("MyData.bin");
 		BufferedOutputStream bOut = new BufferedOutputStream(out);
 		DataOutputStream dOut = new DataOutputStream(bOut);
-		
 		dOut.writeInt(9999);
 		dOut.writeDouble(1.124);
 		dOut.close();
 		
-		//ÆÄÀÏ¿¡¼­ ·Îµù
+		// íŒŒì¼ì—ì„œ ë¡œë”©
 		InputStream in = new FileInputStream("MyData.bin");
 		BufferedInputStream bIn = new BufferedInputStream(in);
 		DataInputStream dIn = new DataInputStream(bIn);
@@ -34,7 +30,13 @@ public class DataBufferedFilterStream {
 		
 		System.out.println("int = " + num);
 		System.out.println("double = " + dNum);
-
 	}
-
 }
+
+
+
+
+
+
+
+

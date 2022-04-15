@@ -1,0 +1,9 @@
+package fileio.ex04.bufferstream;
+
+//버퍼(임시저장소)를 제공하는 필터 클래스
+
+public class BufferedFileCopy {
+	public static void main(String[] args) {
+		
+	}
+}

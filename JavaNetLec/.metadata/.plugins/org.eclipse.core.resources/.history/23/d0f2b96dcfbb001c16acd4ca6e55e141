@@ -1,0 +1,5 @@
+package net.ex02.echoclient;
+
+public class EchoClient {
+
+}

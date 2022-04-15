@@ -1,0 +1,5 @@
+package net.ex07.cmdpacketserver;
+
+public class CmdPacketServer {
+
+}

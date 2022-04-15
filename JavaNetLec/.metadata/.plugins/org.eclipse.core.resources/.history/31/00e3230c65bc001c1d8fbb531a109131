@@ -1,0 +1,12 @@
+package net.ex06.multithreadclient;
+
+import java.net.Socket;
+
+public class EchoLoopClient {
+	final static String IP = "127.0.0.1";
+	final static int PORT = 9000;
+	
+	public static void main(String[] args) {
+		Socket clientSocket = new Socket(IP, PORT);
+	}
+}

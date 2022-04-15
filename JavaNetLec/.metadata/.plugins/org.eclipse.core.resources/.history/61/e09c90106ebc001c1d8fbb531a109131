@@ -1,0 +1,8 @@
+package net.ex08.cmdpacketclient;
+
+[Application Layer의 약속을 정의(프로토콜 정의=패킷설계)]
+		
+
+public class CmdPacketClient {
+
+}

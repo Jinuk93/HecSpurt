@@ -1,0 +1,31 @@
+package net.ex06.multithreadclient;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.Socket;
+import java.net.UnknownHostException;
+
+public class EchoLoopClient {
+	final static String IP = "127.0.0.1";
+	final static int PORT = 9000;
+	
+	public static void main(String[] args) {
+		try {
+			//1) 소켓생성과 동시에 서버와 연결
+			Socket clientSocket = new Socket(IP, PORT);
+			
+			//2) 키보드 입력받을 스트림 생성
+			InputStreamReader inK = new InputStreamReader(System.in);
+			BufferedReader keyboard = new BufferedReader(inK);
+			
+		} catch (UnknownHostException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+}
+
+
+

@@ -5,22 +5,25 @@ import java.io.IOException;
 import java.io.Writer;
 
 /*
-2Áø¹ı, ¹®ÀÚ¿­ ÇüÅÂ·Î ¿­¾î¾ßÇÏ´À³Ä µîÀÇ ¿É¼ÇÀÌ ´Ù¸£´Ù
-1´Ü°è ¶§ ½ºÆ®¸µ »ı¼ºÇÑ´Ù. ´Ü, ¹®ÀÚ¿­ Çü½ÄÀÌ¹Ç·Î Çü½Ä¿¡ ¸Â´Â Å¬·¡½º °´Ã¼¸¦ »ı¼ºÇÑ´Ù
-2´Ü°è, ÀÔÃâ·Â
-3´Ü°è, ½ºÆ®¸² ´İ±â
+1ë‹¨ê³„ ìŠ¤íŠ¸ë¦¼ ìƒì„±
+  ë‹¨, ë¬¸ìì—´ í˜•ì‹ì— ë§ëŠ” í´ë˜ìŠ¤ ê°ì²´ ìƒì„±
+2ë‹¨ê³„ ì…ì¶œë ¥
+3ë‹¨ê³„ ìŠ¤íŠ¸ë¦¼ ë‹«ê¸°
 */
-public class CharwriterStream {
+public class CharWriterStream {
 	public static void main(String[] args) throws IOException {
-		//1´Ü°è <¾²°í>
-		Writer out = new FileWriter("My.txt"); //txtÅ¸ÀÔÀÇ My¶ó´Â ÆÄÀÏ¸íÀ¸·Î ¾Æ·¡ÀÇ ±ÛÀ» Ãâ·ÂÇÑ´Ù
+		// 1ë‹¨ê³„
+		Writer out = new FileWriter("My.txt");
 		
-		//2´Ü°è <Ãâ·ÂÇÏ°í>
+		// 2ë‹¨ê³„
 		out.write('A');
 		out.write('B');
 		out.write("HongGilDong");
-
-		//3´Ü°è <´İ´Â´Ù>
+		
+		// 3ë‹¨ê³„
 		out.close();
 	}
 }
+
+
+

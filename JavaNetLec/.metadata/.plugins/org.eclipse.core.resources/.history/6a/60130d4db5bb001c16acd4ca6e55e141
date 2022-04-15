@@ -1,0 +1,5 @@
+package thread.ex05.threadneedjoin;
+
+public class ThreadNeedJoin {
+
+}

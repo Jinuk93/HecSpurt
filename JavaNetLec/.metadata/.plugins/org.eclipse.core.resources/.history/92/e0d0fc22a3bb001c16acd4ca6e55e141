@@ -1,0 +1,15 @@
+package thread.ex01.nothread;
+
+public class NoThread {
+	public static void study() {
+		
+	}
+	
+	public static void music() {
+		
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+}

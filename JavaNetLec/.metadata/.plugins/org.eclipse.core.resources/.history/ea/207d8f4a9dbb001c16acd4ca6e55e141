@@ -1,0 +1,5 @@
+package fileio.ex09.bufferedreader;
+
+public class StringBufferedReader {
+
+}

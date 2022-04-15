@@ -1,0 +1,49 @@
+package fileio.ex02.bufferfilecopy;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
+
+/*
+파일 입출력 3단계는 동일
+다만, 읽거나 저장할 때 일정 크기 이상 많이 시도
+=> 속도가 개선
+*/
+public class BufferFileCopy {
+	public static void main(String[] args) throws FileNotFoundException {
+		// 1단계 stream open
+		InputStream in = new FileInputStream("putty.exe");
+		OutputStream out = new FileOutputStream("futty.exe");
+		int copyByte = 0;	// 전체 몇바이트 읽었니(기록했니)?
+		int readLen = 0;	// 한번 읽을 때 얼마나 읽었니?
+		byte[] buf = new byte[1024];	// 파일을 한번에 읽어들일 저장소
+		
+		long sTime = System.currentTimeMillis();
+		
+		long eTime = System.currentTimeMillis();
+		
+		// 3단계
+		in.close();
+		out.close();
+		
+		System.out.println("Copy Bytes : " + copyByte);
+		System.out.println("Copy Times : " + (eTime-sTime));
+		
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
