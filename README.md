@@ -34,23 +34,29 @@
 |***🌼 22.4.11 - 22.7.29 🌼***|
 |---|
  
-## 1️⃣ ***Basic course*** 
+## 📕 ***Basic course*** 
 
 |기간|2022.04.11 - 2022.06.09|
 |---|---|
 
-### Misson
+<br>
+
+### ***1️⃣ STEP 1***
+- ***Java, Java Network, Oracle***
+
+### ***Step1 Misson***
 
 |Project|Repository|Pull Request|
 |---|---|---|
 
-### ***STEP 1***
-- ***Java, Java Network, Oracle***
+<br>
 
-### ***STEP 2***
+### ***2️⃣ STEP 2***
 - ***Servlet/JSP, HTML5/CSS3, JavaScript, Ajax/JSON, Node.js, SpringFramework***
 
-## 2️⃣ ***Project course***
+<br>
+
+## 📕 ***Project course***
 
 |기간|2022.06.10 - 2022.07.29|
 |---|---|
