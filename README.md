@@ -9,13 +9,13 @@
 </ul>
 </details>
 
-## Post
+## POST
 - [최종합격 후기](https://github.com/Jinuk93/HecSpurt/blob/master/Post/Before%20start%2C.md)
 - [교육과정 및 일정](https://github.com/Jinuk93/HecSpurt/blob/master/Post/curriculum.md)
 
 <br>
 
-## Archive
+## ARCHIVE
 
 ### 📚 [헥스퍼트 아카데미 스터디](https://github.com/Jinuk93/HecSpurt/blob/master/Study/README.md)
   
@@ -27,15 +27,14 @@
 
 <br>
  
-## HecSpurt 
+## HECSPURT
 
-|***🌼 학습기간 22.4.11 - 22.7.29 🌼***|
-|---|
+***🌼 학습기간 22.4.11 - 22.7.29 🌼***
  
 ## 📕 ***Basic course*** 
 
-|기간|2022.04.11 - 2022.06.09|
-|---|---|
+ |기간|2022.04.11 - 2022.06.09|
+ |---|---|
 
 <br>
 
