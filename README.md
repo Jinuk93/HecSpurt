@@ -39,6 +39,11 @@
 |기간|2022.04.11 - 2022.06.09|
 |---|---|
 
+### Misson
+
+|Project|Repository|Pull Request|
+|---|---|---|
+
 ### ***STEP 1***
 - ***Java, Java Network, Oracle***
 
