@@ -1,7 +1,5 @@
 INDEX VERSION 1.131+F:\HecSpurt_Workspace\javaNetLec\.metadata\.plugins\org.eclipse.jdt.core
-2040232106.index
 1865797976.index
-2354877934.index
 3675294312.index
 2382323647.index
 334937169.index
