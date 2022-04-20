@@ -39,8 +39,9 @@
 ### ***Step1 Misson***
 
 |Project|Repository|
-|TicTacToe|[Tic-Tac-Toe](https://github.com/Jinuk93/TicTacToe)|
 |---|---|
+|TicTacToe|[TicTacToe Game](https://github.com/Jinuk93/TicTacToe)|
+
 
 <br>
 
