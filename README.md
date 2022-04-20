@@ -38,8 +38,9 @@
 
 ### ***Step1 Misson***
 
-|Project|Repository|Pull Request|
-|---|---|---|
+|Project|Repository|
+|TicTacToe|[Tic-Tac-Toe](https://github.com/Jinuk93/TicTacToe)|
+|---|---|
 
 <br>
 
