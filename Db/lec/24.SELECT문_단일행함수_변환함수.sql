@@ -1,3 +1,5 @@
+
+
 단일 행 함수 - 변환 함수
 
 날짜 출력 형식
@@ -49,66 +51,76 @@ TO_NUMBER : 데이터를 숫자로 해석한다
 
 
 1) 현재 날짜를 다양한 형식으로 출력해보자
-SELECT TO_CHAR(sysdate, 'YYYY/MM/DD') 날짜,
-       TO_CHAR(sysdate, 'YYY/MM/DD:HH24:MI:SS') 날짜,
+SELECT sysdate,
+       TO_CHAR(sysdate, 'YYYY/MM/DD') 날짜,
+       TO_CHAR(sysdate, 'YYYY/MM/DD:HH24:MI:SS') 날짜,
        TO_CHAR(sysdate, 'YY/MM/DD:HH:MI:SS AM') 날짜
-  FROM dual;
-  
+ FROM dual;
+ 
 SELECT TO_CHAR(sysdate, 'DD Month YYYY') 날짜
-  FROM dual;
-  
+ FROM dual;
+ 
 SELECT TO_CHAR(sysdate, 'DAY Mon YY') 날짜
-  FROM dual;
-  
+ FROM dual;
+ 
 SELECT TO_CHAR(sysdate, 'DY Mon YY') 날짜
-  FROM dual;
-
+ FROM dual;
+ 
 SELECT TO_CHAR(sysdate, '"오늘은 "YYYY"년 "MM"월 "DD"일 입니다."') 날짜
-  FROM dual;
+ FROM dual;
+
 
 2) 20번 부서 사원의 입사일을 다음의 형식으로 검색한다
 'XXX 사원의 입사일은 XXXX년 XX월 XX일입니다.'
-SELECT ename||' 사원의 입사일은 ' ||
-      TO_CHAR(hdate, '"YYYY"년 "MM"월 "DD"일 입니다."') 입사일
-  FROM emp
-  WHERE dno='20';
-  
+SELECT ename||' 사원의 입사일은 '||
+       TO_CHAR(hdate, 'YYYY"년 "MM"월 "DD"일 입니다."') 입사일
+ FROM emp
+ WHERE dno='20';
+
+
 3) 다양한 형식으로 숫자를 출력해 보자
 SELECT TO_CHAR(12345.678, '999,999.99999') 숫자
- FROM dual; 
+ FROM dual;
 
-SELECT TO_CHAR(12345.678, '099,999.999.9') 숫자
- FROM dual; -- 소수점 앞자리가 부족하면 출력장애가 발생한다
-
-SELECT TO_CHAR(1234, '$999m999') 숫자
-FROM dual;
-
+SELECT TO_CHAR(12345.678, '099,999.999') 숫자
+ FROM dual;
+ 
+SELECT TO_CHAR(12345.678, '9,9999.9') 숫자
+ FROM dual;
+ 
+SELECT TO_CHAR(12345.678, '9,999.9') 숫자
+ FROM dual;   -- 소수점 앞자리가 부족하면 출력장애가 발생한다.
+ 
+SELECT TO_CHAR(1234, '$999,999') 숫자
+ FROM dual;
+ 
 SELECT TO_CHAR(1234, 'L999,999') 숫자
-FROM dual;
-
-SELECT TO_CHAR(1234, '999,999MI') 숫자
-FROM dual;
-
-SELECT TO_CHAR(1234, '9.999EEEE') 숫자
-FROM dual;
+ FROM dual;
+ 
+SELECT TO_CHAR(-1234, '999,999MI') 숫자
+ FROM dual;
+ 
+SELECT TO_CHAR(123456789, '9.999EEEE') 숫자
+ FROM dual;
 
 4) 20번 부서의 사원의 보너스가 급여의 몇 퍼센트인지 검색한다
 급여는 월간급여이고 보너스는 연간 보너스이다
 보너스가 null 인 경우는 0으로 환원해서 검색한다
 SELECT eno, ename,
-      TO_CHAR(NVL(comm,0)/(sal*12)*100, '99')||'%' 급여비율
-  FROM emp
-  WHERE dno='20';
-
+       TO_CHAR(NVL(comm,0)/(sal*12)*100, '99')||'%' 급여비율
+ FROM emp
+ WHERE dno='20';
+ 
 SELECT eno, ename,
-      ROUND(NVL(comm,0)/(sal*12)*100)||'%' 급여비율
-  FROM emp
-  WHERE dno='20'; 
+       ROUND(NVL(comm,0)/(sal*12)*100)||'%' 급여비율
+ FROM emp
+ WHERE dno='20';
+
             
 5) 1992년 이전에 입사한 사원의 정보를 검색하자
 SELECT eno, ename, hdate
-  FROM emp
-  WHERE hadate < TO_DATE('1992/01/01','YYYY/MM/DD');
+ FROM emp
+ WHERE hdate < TO_DATE('1992/01/01', 'YYYY/MM/DD');
 
 세션의 출력 형식이 'DD-MON-YY'등과 같이 달라진다면
 WHERE hdate < '1992/01/01' 방식의 비교는

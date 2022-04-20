@@ -29,33 +29,47 @@ SIGN : SIGN(m)
         m이 음수일 때 -1, 양수일 때 1, 0이면 0을 반환
         SIGN(-3) => -1
         
-1)다양한 숫자 함수를 이용한 결과를 확인한다
-SELECT ROUND(98.765), TRUNC(98.765), --ROUND 반올림
+--1)다양한 숫자 함수를 이용한 결과를 확인한다
+SELECT ROUND(98.765), TRUNC(98.765),
        ROUND(98.765, 2), TRUNC(98.765, 2)
-  FROM dual;
+ FROM dual;
+ 
+SELECT MOD(19, 3), MOD(-19, 3)
+ FROM dual;
 
 2)부서의 연봉을 계산한다. 단 100단위 미만은 절삭한다
-SELECT enm, ename, TRUNC(sal*12+NVL(comn,0), -2) 연봉 --TRUNC 절삭
-  FROM emp;
-  
+SELECT eno, ename, TRUNC(sal*12+NVL(comm,0), -2) 연봉
+ FROM emp;
+ 
 SELECT TRUNC(19786.786, 2), TRUNC(19786.786, -2)
-  FROM dual;
+ FROM dual;
+        
         
 --날짜 함수
 
---3)현재 시간을 검색하자
+3)현재 시간을 검색하자
 SELECT sysdate
-  FROM dual;
+ FROM dual;
+ 
+ALTER SESSION SET nls_date_format='YYYY/MM/DD:HH24:MI:SS';
 
---4)김연아의 
---오늘 날짜, 입사 일자, 입사일로부터 오늘까지 기간,
---입사일 이후 100일이 지난날 등을 검색하고
---날짜 연산의 결과를 보자
+SELECT sysdate
+ FROM dual;
+
+4)김연아의 
+오늘 날짜, 입사 일자, 입사일로부터 오늘까지 기간,
+입사일 이후 100일이 지난날 등을 검색하고
+날짜 연산의 결과를 보자
 ALTER SESSION SET nls_date_format='YY/MM/DD';
 
 SELECT sysdate, hdate, sysdate-hdate, hdate+100
-  FROM emp
-  WHERE ename='김연아';
+ FROM emp
+ WHERE ename='김연아';
+ 
+SELECT sysdate, hdate, TRUNC(sysdate-hdate), hdate+100
+ FROM emp
+ WHERE ename='김연아';
+
 
 
 날짜 + 숫자 = 날짜(일수 이후 날짜)
@@ -100,52 +114,55 @@ LAST_DAY : LAST_DAY(날짜)
 
 5) 숫자와 날짜를 반올림하여 출력한다
 SELECT sysdate, 
-        ROUND(sysdate, 'YY') 년,
-        ROUND(sysdate, 'YY') 년,
-        ROUND(sysdate, 'YY') 년,
-  FROM dual;
+       ROUND(sysdate, 'YY') 년,
+       ROUND(sysdate, 'MM') 월,
+       ROUND(sysdate, 'DD') 일
+ FROM dual;
 
 6) 숫자와 날짜를 절삭하여 출력한다
 SELECT sysdate,
-    TRUNC(sysdate, 'YY') 년,
-    TRUNC(sysdate, 'MM') 월,
-    TRUNC(sysdate, 'DD') 일,
-  FROM dual;
+       TRUNC(sysdate, 'YY') 년,
+       TRUNC(sysdate, 'MM') 월,
+       TRUNC(sysdate, 'DD') 일
+ FROM dual;
 
 7) 김연아가 오늘까지 일한 일수를 검색한다
 입사일을 포함하기 위해 +1을 해줬다
 SELECT TRUNC(sysdate, 'DD') - TRUNC(hdate, 'DD')+1 "일한 날"
-  FROM emp
-  WHERE ename='김연아';
+ FROM emp
+ WHERE ename='김연아';
+
 
 8) 20번 부서 직원들이 현재까지 근무한 개월 수를 검색한다
 SELECT eno, ename, TRUNC(MONTHS_BETWEEN(sysdate, hdate)) 근무개월
-  FROM emp --ename 직원 이름 eno 사원번호
-  WHERE dno='20'; --dno 근무개월
+ FROM emp
+ WHERE dno='20';
 
 9) 20번 부서원들이 입사 100일째 되는 날과 10년째 되는 날을 검색한다
 SELECT eno, ename, hdate 입사일, hdate+99 "입사 100일째",
-      ADD_MONTHS(hdate, 10*12) "입사 10년째 되는 날"
-  FROM emp
-  WHERE don='20';
+       ADD_MONTHS(hdate, 10*12) "입사 10년째 되는 날"
+ FROM emp
+ WHERE dno='20';
 
 10) 20번 부서원들이 입사한 이후 첫 번째 일요일을 검색한다
-SELECT eno, ename, hdate,
-      NEXT_DAY(hdate, '일요일') "입사 후 첫번째 일요일"
-  FROM emp
-  WHERE dno='20';
-
+SELECT eno, ename, hdate, 
+       NEXT_DAY(hdate, '일요일') "입사 후 첫번째 일요일"
+ FROM emp
+ WHERE dno='20';
+ 
 SELECT NEXT_DAY(sysdate, '일요일') "오늘이후첫번째일요일"
-  FROM dual;
+ FROM dual;
 
 11) 20번 부서원들의 입사한 달의 마지막 날짜와
 입사한 달에 근무 일수를 검색한다
 --(단 입사일은 근무일에서 제외한다)
-SELECT eno, ename, hdate,
+SELECT eno, ename, hdate, 
        LAST_DAY(hdate) "입사한 달 마지막 날짜",
-       LAST_DAY(TRUNC(hdate))-TRUNC(hdate) "입사한달근무일수"
-  FROM emp
-  WHERE dno='20';
+       LAST_DAY(TRUNC(hdate))-TRUNC(hdate) "입사한 달 근무일수"
+ FROM emp
+ WHERE dno='20';
+
+
 
 
 
