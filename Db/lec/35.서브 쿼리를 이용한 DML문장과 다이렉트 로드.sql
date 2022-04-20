@@ -58,7 +58,16 @@ SET (컬럼, 컬럼, ...) = (SELECT 문장)
   
   
 1) emp2 테이블에 사번과 연봉을 입력한다
+DESC emp2;
 
+SELECT * FROM emp2;
+
+INSERT INTO emp2(eno, asal)
+ SELECT eno, sal*12+NVL(comm,0) FROM emp;
+ 
+COMMIT;
+
+SELECT * FROM emp2;
 
 2) 데이터 타입이 일치하지 않으면 에러 발생
 데이터 입력이 가능한 경우
@@ -69,18 +78,39 @@ SET (컬럼, 컬럼, ...) = (SELECT 문장)
    '10' => 10
    숫자형 => 문자형 컬럼
    
-
+INSERT INTO emp2(eno, asal)
+  SELECT eno, hdate FROM emp;
+  
+INSERT INTO emp2(eno, asal)
+ SELECT eno, ename FROM emp;
 
 
 3) 아래 경우는 자동형변환 되어 들어간다
 '30' -> 30 으로 형변환이 이루어진다
+INSERT INTO emp2(eno, asal)
+ SELECT eno, dno FROM emp;
+ 
+COMMIT;
 
+SELECT * FROM emp2;
 
 
 
 4) 각 사원의 정보와 근무지를 emp3 테이블에 저장하라
+DESC emp3;
 
+SELECT * FROM emp3;
 
+INSERT /*+ APPEND */ INTO emp3 NOLOGGING (eno, ename, dno, dname)
+ SELECT eno, ename, dno, dname
+ FROM emp
+ JOIN dept USING(dno);
+
+SELECT * FROM emp3;
+
+COMMIT;
+
+SELECT * FROM emp3;
 
 
 
@@ -125,19 +155,52 @@ SELECT 작업이나 DML 작업은 모두 메모리에서 이루어진다.
 6) 윤고은의 급여와 보너스를 
 각각 김연아의 급여와
 손하늘의 보너스와 동일하게 수정한다
+UPDATE emp SET
+  sal = (SELECT sal FROM emp WHERE ename='김연아'),
+  comm = (SELECT comm FROM emp WHERE ename='손하늘')
+ WHERE ename='윤고은';
+ 
+COMMIT;
 
+SELECT * 
+ FROM emp
+ WHERE ename IN('김연아', '손하늘', '윤고은');
 
 
 7) 제갈민과 동일한 부서의 사원들의 급여를
 제갈민의 급여와 동일하게 수정한다
+UPDATE emp SET
+ sal = (SELECT sal FROM emp WHERE ename='제갈민')
+ WHERE dno = (SELECT dno FROM emp WHERE ename='제갈민');
+ 
+COMMIT;
+
+SELECT dno, eno, ename, sal
+ FROM emp
+ WHERE dno=(SELECT dno
+            FROM emp
+            WHERE ename='제갈민');
 
 
 
 8) 이초록의 급여, 보너스를 김연아와 동일하게 수정한다
+UPDATE emp SET
+ (sal, comm) = (SELECT sal, comm
+                 FROM emp
+                 WHERE ename='김연아')
+ WHERE ename='이초록';
+ 
+COMMIT;
 
+SELECT sal, comm, eno, ename
+ FROM emp
+ WHERE ename IN('김연아', '이초록');
 
 9)위의 Query 보다 아래 Query 가 성능이 낮다
-
+UPDATE emp SET
+ sal = (SELECT sal FROM emp WHERE ename='김연아'),
+ comm = (SELECT comm FROM emp WHERE ename='김연아')
+ WHERE ename='이초록';
 
 
 
