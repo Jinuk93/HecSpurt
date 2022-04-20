@@ -40,7 +40,7 @@
 
 |Project|Repository|
 |---|---|
-|TicTacToe|[Tic-Tac-Toe Game](https://github.com/Jinuk93/TicTacToe)|
+|TicTacToe|[TicTacToe-Game](https://github.com/Jinuk93/TicTacToe)|
 
 
 <br>
