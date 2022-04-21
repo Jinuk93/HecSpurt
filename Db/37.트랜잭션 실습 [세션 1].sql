@@ -11,6 +11,7 @@ SELECT * FROM student WHERE sname='마초';
 UPDATE student SET avr = 0.1
 WHERE sname='마초';
 
+
 2) COMMIT 을 하지 않았으므로 마초의 행에는
   독점 잠금이 발생하고, student 테이블에는
   공유 잠금이 발생하였다.

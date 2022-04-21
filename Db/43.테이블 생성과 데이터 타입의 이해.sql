@@ -84,9 +84,9 @@
      
   4. 데이터 타입 상세
     1) VARCHAR2(n) : 가변길이 문자타입
-                    (1 < n < 4000 byte)
+                    (1 <= n <= 4000 byte)
     2) CHAR(n): 고정길이 문자타입
-                (1 < n < 4000 byte)
+                (1 <= n <= 4000 byte)
     3) NUMBER(n, p): 숫자 타입
                     n은 전체 자리수
                     p는 소수점 이하 자리수
@@ -123,22 +123,67 @@
 
 
 테이블 이름을 반드시 대문자로 입력한다
+CREATE TABLE board(
+  no NUMBER,
+  name VARCHAR2(50),
+  sub VARCHAR2(100),
+  content VARCHAR2(4000),
+  hdate DATE DEFAULT sysdate
+);
 
+DESC board;
+
+--데이터 딕셔너리에서 테이블을 확인하고 싶으면
+--반드시 대문자로 테이블 명을 써야 한다
+SELECT table_name, column_name, 
+       data_type, data_length
+FROM user_tab_columns   -- sys 계정의 소유 테이블
+WHERE table_name = 'BOARD';
+
+INSERT INTO board(no)
+ VALUES (1);
+ 
+INSERT INTO board(no, hdate)
+ VALUES (2, '2010/10/12');
+ 
+COMMIT;
+
+SELECT * FROM board;
 
 
 DATE 타입을 이해해보자
+CREATE TABLE hd(
+  no NUMBER,
+  hdate DATE
+);
 
+INSERT INTO hd
+ VALUES(1, sysdate);
+ 
+COMMIT;
+ 
+SELECT * FROM hd;
 
 연월일은 같지만 시분초가 다르므로 검색되지 않는다
-
+SELECT *
+ FROM hd
+ WHERE hdate='2022/04/21';
 
 범위 검색을 해야 한다
+SELECT *
+ FROM hd
+ WHERE hdate BETWEEN '2022/04/21' AND '2022/04/22';
 
+SELECT *
+ FROM hd
+ WHERE hdate >= '2022/04/21' AND hdate < '2022/04/22';
 
 아래 방법은 비추천
 왜냐하면 hdate를 문자열로 자동 형 변환하므로
 대용량 테이블에서는 심각한 성능 저하가 일어날 수 있다.
-
+SELECT *
+ FROM hd
+ WHERE hdate LIKE '22/04/21%';
 
 1) 우리나라에서는 날짜는 DATE 보다 VARCHAR2(8)
    이렇게 정의하는 경우가 많다.
