@@ -41,7 +41,7 @@
 |Project|Repository|
 |---|---|
 |TicTacToe|[TicTacToe 1:1](https://github.com/Jinuk93/TicTacToe)|
-|TicTacToe|[TicTacToe N:1]()|
+|TicTacToe|[TicTacToe N:1](https://github.com/Jinuk93/TicTacToe_v2)|
 
 <br>
 
