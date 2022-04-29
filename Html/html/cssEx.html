@@ -7,7 +7,25 @@
     <!-- <link type="text/css" rel="stylesheet" href="../css/css_ex.css"></link> -->
     <title>Document</title>
     <style>
-     div {
+        body>div>h3 {
+            color : red;
+    
+        }
+        body>p {
+            color : green;
+            background-color: yellow;
+        }
+        body>h3>tel>mobile {
+            color : blue;
+        }
+        /* div ul {
+            color: red;
+        }
+        div h2 {
+            color : yellow;
+            background-color: purple;
+        } */
+     /* div {
          width:200px; height: 100px; color:blue;
          background-color: green; opacity: 0.9;
      }
@@ -15,7 +33,7 @@
          width:400px; height:50px; color:red;
          background-color: yellow; opacity: 0.5;
          transition: all 1.5s linear 0.5s;
-     }
+     } */
 
     /* a:link{color: blue; text-decoration: underline;}
     a:visited { color: red;}
@@ -71,12 +89,31 @@
     </style>
 </head>
 <body>
-    <h2>Peseudo Class</h2>
+    <div>
+    <h3>Child Selector</h3>
+    </div>
+    <p>자식 선택자</p>
+    <h3>
+        <sn>1111</sn><br>
+        <std>conan</std><br>
+
+        <tel>
+            <office>02-1111-1111</office><br>
+            <mobile>010-1111-1111</mobile>
+        </tel>
+    </h3>
+
+    <!-- <div>
+    <h2>Descendant Selector</h2>
+    <ul>후손 선택자
+        <li>자식의 자식(후손1)</li>
+        <li>자식의 자식(후손2)</li>
+    </ul>
+    </div>
+    <h2>Descendant Selector_2</h2> -->
+    <!-- <h2>Peseudo Class</h2>
     <div>애니메이션 효과<br>
-    마우스가 위에 있으면 박스가 변함</div>
-    
-
-
+    마우스가 위에 있으면 박스가 변함</div> -->
 
     <!-- <h2>Paseudo Class</h2>
     <p><a href="http://www.w3.org" target="_blank">W3C 방문</a>
