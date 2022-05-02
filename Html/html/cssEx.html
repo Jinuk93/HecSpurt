@@ -8,7 +8,88 @@
     <!-- <link type="text/css" rel="stylesheet" href="../css/css_ex.css"></link> -->
     <title>Document</title>
     <style>
+        @keyframes bounce {
+            from, to {
+                bottom:  0px;
+                animation-timing-function: ease-out;
+            }
+            50% {
+                bottom : 200px;
+                animation-timing-function: ease-in;
+            }
+        }
         div {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            animation-name: bounce;
+            animation-iteration-count: infinite;
+        }
+         
+    #b1 {
+        left : 10px;
+        background : red;
+        animation-duration : 5s;
+    }
+    #b2 {
+        left: 50px;
+        background: blue;
+        animation-duration: 10s;
+    }
+    #b3 {
+        left: 90px;
+        background: green;
+        animation-duration: 3s;
+    }
+    #b4 {
+        left: 130px;
+        background: silver;
+        animation-duration: 8s;
+    }
+    #b5 {
+        left: 170px;
+        background: black;
+        animation-duration: 1s;
+    }
+        /* div {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: relative;
+            animation: colorbox 5s infinite;
+            animation-direction: alternate;
+        }
+        @keyframes colorbox {
+            from { background-color: red; left: 0px; top: 0px;}
+            25% { background: orange; left: 300px; top: 0px;}
+            50% { background: yellow; left: 300px; top: 300px;}
+            75% { background: green; left: 0px; top: 300px;}
+            to { background: red; left: 0px; top: 0px;}
+        } */
+        /* #div1 {
+            background-color: blue;
+            animation-direction: normal;
+            animation-name: L-box;
+        }
+        #div2 {
+            background-color: yellow;
+            animation-direction: reverse;
+            animation-name: R-box;
+        } */
+        /* @keyframes L-box {
+            0% { left: : 0px;}
+            50% { left: 200px; }
+            100% {  left : 0px; }
+        }
+        @keyframes R-box {
+            0% { left: : 400px;}
+            50% { left: 200px; }
+            100% {  left : 400px; }
+        } */
+
+
+        /* div {
             width: 100px;
             height: 50px;
             background: crimson;
@@ -23,7 +104,7 @@
         #div6 { transition-timing-function: cubic-bezier(0.1, 0.0, 0.1, 1.0);}
         div:hover{
             width:400px;
-        }
+        } */
        
         /* h1, p {
             width: 300px;
@@ -477,12 +558,21 @@
     </style>
 </head>
 <body>
-  <div id="div1" style="top: 100px">linear</div>
+    <div id="b1"></div>
+    <div id="b2"></div>
+    <div id="b3"></div>
+    <div id="b4"></div>
+    <div id="b5"></div>
+ <!-- <div id="div1">왼쪽 박스</div>
+ <div id="div2">오른쪽 박스</div> -->
+
+
+  <!-- <div id="div1" style="top: 100px">linear</div>
   <div id="div2" style="top: 150px">linear</div>
   <div id="div3" style="top: 200px">linear</div>
   <div id="div4" style="top: 250px">linear</div>
   <div id="div5" style="top: 300px">linear</div>
-  <div id="div6" style="top: 350px">linear</div>
+  <div id="div6" style="top: 350px">linear</div> -->
 
   <!-- <div>
         <a href="http://google.com">구글 웹사이트</a>
