@@ -8,7 +8,13 @@
 </head>
 <body>
 	<h3>first page</h3>
-	<jsp:forward page="second.jsp"/>
-	<p>--첫번쨰 페이지--</p>
+	<jsp:include page="second.jsp" flush="false">
+
+	
+	<%-- <%-- <jsp:forward page="second.jsp"/> --%>
+<!-- <p>--첫번쨰 페이지--</p> 
+	
+	<%String p = request.getParameter("p"); %>
+	<jsp:forward page="<%=p%>"/> --%> 
 </body>
 </html>
