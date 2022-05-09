@@ -37,18 +37,7 @@
          UserDatabaseRealm to authenticate users
     -->
     <Resource auth="Container" description="User database that can be updated and saved" factory="org.apache.catalina.users.MemoryUserDatabaseFactory" name="UserDatabase" pathname="conf/tomcat-users.xml" type="org.apache.catalina.UserDatabase"/>
-<!--     <Resource driverClassName="oracle.jdbc.driver.OracleDriver"
-              url="jdbc:oracle:thin:@127.0.0.1:1521:xe"
-              username="scott"
-              password="tiger"
-              name="jdbc/myoracle"   
-              type="javax.sql.DataSource" 
-              maxActive="10"  
-              maxIdle="4"    
-              maxWait="5000"          
-               />   -->
-<!--   <Resource auth="Container" description="User database that can be updated and saved" factory="org.apache.catalina.users.MemoryUserDatabaseFactory" name="UserDatabase" pathname="conf/tomcat-users.xml" type="org.apache.catalina.UserDatabase"/>
- -->  </GlobalNamingResources>
+  </GlobalNamingResources>
 
   <!-- A "Service" is a collection of one or more "Connectors" that share
        a single "Container" Note:  A "Service" is not itself a "Container",
@@ -164,7 +153,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="test" path="/test" reloadable="true" source="org.eclipse.jst.jee.server:test"/></Host>
+      <Context docBase="test" path="/test" reloadable="true" source="org.eclipse.jst.jee.server:test"/><Context docBase="test" path="/test" reloadable="true" source="org.eclipse.jst.jee.server:test"/></Host>
     </Engine>
   </Service>
 </Server>
