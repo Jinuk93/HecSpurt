@@ -8,7 +8,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-	<%@page import="cookie.Members"%> 
+	<%@page import="Member.MemberDTO"%> 
 <body>
 	<% 
 		String url = "jdbc:oracle:thin:@localhost:1521:xe";
@@ -20,7 +20,7 @@
 		Connection conn = DriverManager.getConnection(url, dbId,dbPwd);
 	%>
 	<%
-	Members member = new Members();
+	Member.MemberDTO member = new Member.MemberDTO();
 	%>
 	
 	<!-- JoinForm에서 입력한 데이터를 그대로 출력한다 -->
