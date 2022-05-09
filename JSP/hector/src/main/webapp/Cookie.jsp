@@ -13,7 +13,7 @@
 	cookie.setValue("tea");
 	response.addCookie(cookie);
 	%>
-	<h3>쿠키 생성</h3>
+	<h3>쿠키 생성!!</h3>
 	<p> 쿠키 내용 확인은 <a href="tasteCookie.jsp">Here</a>!!!</p>
 </body>
 </html>
