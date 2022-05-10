@@ -1,30 +1,30 @@
 package cookie;
 
 public class Book {
-	private int bookid;
-	private String bookname;
+	private int bookId;
+	private String bookName;
 	private String publisher;
 	private int price;
 	
 	public Book() {}
-	public Book(int bookid, String bookname, String publisher, int price) {
-		this.bookid = bookid;
-		this.bookname = bookname;
+	public Book(int bookId, String bookName, String publisher, int price) {
+		this.bookId = bookId;
+		this.bookName = bookName;
 		this.publisher = publisher;
 		this.price = price;
 	}
 	
-	public int getBookid() {
-		return bookid;
+	public int getBookId() {
+		return bookId;
 	}
-	public void setBookid(int bookid) {
-		this.bookid = bookid;
+	public void setBookId(int bookId) {
+		this.bookId = bookId;
 	}
-	public String getBookname() {
-		return bookname;
+	public String getBookName() {
+		return bookName;
 	}
-	public void setBookname(String bookname) {
-		this.bookname = bookname;
+	public void setBookName(String bookName) {
+		this.bookName = bookName;
 	}
 	public String getPublisher() {
 		return publisher;

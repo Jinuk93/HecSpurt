@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page import="java.sql.*" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,6 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+	회원 가입이 정상적으로 되었습니다<br>
 
+	<br/>
+	<a href="exam2_loginFrm.jsp">로그인</a>
 </body>
 </html>

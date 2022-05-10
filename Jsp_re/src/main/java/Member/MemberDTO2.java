@@ -2,7 +2,7 @@ package Member;
 
 import java.sql.Timestamp;
 
-public class MemberDTO {
+public class MemberDTO2 {
 	private String userId;
 	private String userPwd;
 	private String userName;
@@ -11,10 +11,9 @@ public class MemberDTO {
 	private String email;
 	private Timestamp regdate;
 	
+	public MemberDTO2() {};
 	
-	
-	public MemberDTO(String userId, String userPwd, String userName, String phoneNo, String address, String email) {
-		super();
+	public MemberDTO2(String userId, String userPwd, String userName, String phoneNo, String address, String email) {
 		this.userId = userId;
 		this.userPwd = userPwd;
 		this.userName = userName;

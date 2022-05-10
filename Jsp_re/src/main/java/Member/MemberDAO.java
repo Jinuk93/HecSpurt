@@ -36,15 +36,15 @@ public class MemberDAO {
 		   con = getConnection();
 
 		   //3단계 insert
-		   sql="insert into MEMBERS VALUES(?,?,?,?,?,?)";
+		   sql="insert into MEMBERS VALUES(userId,userPwd,userName,phoneNo,address,email)";
 		   pstmt=con.prepareStatement(sql);
 		   
-		   pstmt.setString(1, userId);
-		   pstmt.setString(2, userPwd);
-		   pstmt.setString(3, userName);
-		   pstmt.setString(4, phoneNo);
-		   pstmt.setString(5, address);
-		   pstmt.setString(6, email);
+		   pstmt.setString(1, member.getUserId());
+		   pstmt.setString(2, member.getUserPwd());
+		   pstmt.setString(3, member.getUserName());
+		   pstmt.setString(4, member.getPhoneNo());
+		   pstmt.setString(5, member.getAddress());
+		   pstmt.setString(6, member.getEmail());
 		   
 		   //4단계 실행
 		   pstmt.executeUpdate();
