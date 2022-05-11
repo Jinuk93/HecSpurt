@@ -3,6 +3,7 @@ package Member;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -20,8 +21,15 @@ public class TestServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		MemberDAO2 dao2 = MemberDAO2.getInstance();
-		ArrayList<MemberDTO> list = dao2.selectMemberALL();
-		for(MemberDTO2 dto2 : list) 
-				System.out.println(dto2); //toString() 오버라이딩
+		ArrayList<MemberDTO2> list = dao2.selectMemberAll();
+		
+		for(MemberDTO2 test : list) {
+				System.out.println(test);
+		}//toString() 오버라이딩
+		
+		request.setAttribute("list", list);
+	      
+	    RequestDispatcher rd = request.getRequestDispatcher("memberSelectAll.jsp");
+	    rd.forward(request, response);
 	}
 }

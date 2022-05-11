@@ -19,12 +19,12 @@ public class MemberDAO2 {
 	
 	//singleton 싱글톤
 	//1. 스스로 객체를 1개 생성한다
-	private static MemberDAO dao2 = new MemberDAO();
+	private static MemberDAO2 dao2 = new MemberDAO2();
 	//2. 외부에서 생성자를 호출할 수 없도록 생성자에 private 제한을 붙임
 	private MemberDAO2() {
 	}
 	//3. 외부에서 객체생성을 요구하면 getter메서드를 이용해서 1번의 객체를 반환
-	public static MemberDAO getInstance() {
+	public static MemberDAO2 getInstance() {
 		return dao2;
 		}
 	
@@ -77,7 +77,7 @@ public class MemberDAO2 {
 			
 			//4단계 실행
 		    ResultSet rs = pstmt.executeQuery();
-		    rs.next(); //불린형
+		    //rs.next(); //불린형
 		    	while(rs.next()) {	    		
 		    		String userId = rs.getString("userId");
 		    		String userPwd = rs.getString("userPwd");
@@ -85,7 +85,10 @@ public class MemberDAO2 {
 		    		String phoneNo = rs.getString("phoneNo");
 		    		String address = rs.getString("address");
 		    		String email = rs.getString("email");
+		    		
 		    		MemberDTO2 dto3 = new MemberDTO2(userId, userPwd, userName, phoneNo, address, email);
+		    		
+		    		System.out.println(dto3.getUserId()+"\n");
 		    		arMember.add(dto3);
 		    	}	
 		    	
@@ -95,6 +98,7 @@ public class MemberDAO2 {
 			}finally{
 				close(con, pstmt);
 			}
+			
 			return arMember;
 	}
 	
@@ -232,4 +236,5 @@ public class MemberDAO2 {
 			close(con, pstmt);
 		}
 	}
+	
 }
