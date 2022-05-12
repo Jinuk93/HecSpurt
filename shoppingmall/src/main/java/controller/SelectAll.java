@@ -24,7 +24,9 @@ public class SelectAll extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	    ProductsDAO dao = ProductsDAO.getInstance();
+	    
+		
+		ProductsDAO dao = ProductsDAO.getInstance();
         ArrayList<Products> pl = dao.selectProductAll();
 
         request.setAttribute("pl", pl);

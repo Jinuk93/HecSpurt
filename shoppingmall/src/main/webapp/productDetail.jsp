@@ -5,13 +5,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script type="text/javascript">
-	function addToChart() {
-	if(confirm("상품을 장바구니에 추가하시겠습니까?") {
-		document.addForm.submit();
-		}else { document.addForm.reset();	}
-	}
-</script>
 </head>
 <body>
 <%@ include file="menu.jsp"%>
@@ -40,13 +33,20 @@
                 </p>
                 <p>
                     <form name="addForm" action="/AddCart?proId=${product.proId}" method="post">
-                        <a href="javascript:addToCart();" class="btn btn-info">상품 주문 &raquo;</a>
-                        <a href="/Cart" class="btn btn-warning">장바구니 &raquo;</a>
-           			    <a href="/Shoppingmall/SelectAll" class="btn btn-secondary">상품 목록 &raquo;</a>
+                        <a href="#" onclick="addToCart();" class="btn btn-info">상품 주문 &raquo;</a>
+                        <a href="/addCart" class="btn btn-warning">장바구니 &raquo;</a>
+           			    <a href="/shoppingmall/SelectAll" class="btn btn-secondary">상품 목록 &raquo;</a>
        				</form>
         </p>
     </div>
 </div>
+<script type="text/javascript">
+	function addToChart() {
+	if(confirm("상품을 장바구니에 추가하시겠습니까?") {
+		document.addForm.submit();
+		}else { document.addForm.reset();	}
+	}
+</script>
 </body>
 	<jsp:include page="/footer.jsp"/>
 </html>
