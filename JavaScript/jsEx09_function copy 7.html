@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+    window.onload=function() {
+      var button = document.getElementById('myLink');
+      button.onclick=function() { //이벤트 연결
+        return; //return false 하면 이벤트 금지
+      };
+    };
+  </script>
+<a id="myLink" href="http://www.naver.com">네이버 하이퍼링크</a>
+</body>
+</html>

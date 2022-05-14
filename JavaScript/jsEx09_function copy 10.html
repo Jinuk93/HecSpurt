@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+    //주민등록번호 백스페이스
+    window.onload = function() {
+      var input_1 = document.querySelectorAll('input')[0];
+      var input_2 = document.querySelectorAll('input')[1];
+    //input_1
+    input_1.onkeydown = function() {
+      //글자 개수가 여섯 개 이상일 경우
+      if (6 <= input_1.value.length) {
+        //input_2 문서 객체[로 초점을 이동
+        input_2.focus();
+      }
+    };
+    //input2
+    input_2.onkeydown = function(event) {
+      //이벤트 객체를 추출
+      var event = event || window.event;
+          console.log(event);
+      //사용자의 입력이 '백 스페이스'이고, 입력된 글자가 없는 경우
+      if (event.keyCode == 8 && input_2.value.length == 0) {
+        input_1.focus();
+      }
+    };
+  };
+
+  </script>
+  <input type="text" maxlength="6"/>
+  <span>-</span>
+  <input type="text" maxlength="7"/>
+</html>

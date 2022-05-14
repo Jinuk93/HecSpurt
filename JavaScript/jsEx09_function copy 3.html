@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+    var result;
+      function add(name, n) {
+        document.write(name + "학생이 1부터 " + n + "까지 덧셈 수행<br>");
+        var sum =0;
+        for(var i=1; i<=n; i++) {
+          sum += i;
+        }
+        return sum;
+      }
+      result=add('코난', 10);
+      document.write("결과 : " + result + "<p>");
+
+      result=add('장미', 100);
+      document.write("결과 : " + result + "<p>");
+  </script>
+</body>
+</html>

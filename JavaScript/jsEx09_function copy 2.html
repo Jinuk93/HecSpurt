@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+    var text1 = "함수 선언 전 호출 에러";
+    var text2 = "함수 선언 후 호출만 가능";
+    //printMsg(text1);
+    var printMsg=function(msg) {
+      document.write("함수 호출 메시지 : " + msg + "<br>");
+    }
+    printMsg(text2); // 함수 선언 후 호출가능
+  </script>
+</body>
+</html>

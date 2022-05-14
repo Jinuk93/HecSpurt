@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+    function textstyle() {
+      document.getElementById("msg").style.color="pink";
+      document.getElementById("msg").style.fontSize="100px";
+      document.getElementById("msg").style.fontStyle="bold";
+  };
+    function texthidden() {
+      document.getElementById("msg").style.visibility = "hidden"; };
+    function textvisible() {
+      document.getElementById("msg").style.visibility = "visible"; };
+  </script>
+  <p id="msg">문서 객체 스타일 변경</p>
+  <input type="button" onclick="textstyle()" value="텍스트 스타일 변경">
+  <input type="button" onclick="texthidden()" value="텍스트 숨기기">
+  <input type="button" onclick="textvisible()" value="텍스트 보이기">
+</body>
+</html>

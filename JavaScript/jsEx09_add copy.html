@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+  <ul id="coffeeList">
+    <li>americano</li>
+    <li>latte</li>
+  </ul>
+
+  <p>목록에 아이템 추가</p>
+  <button onclick="myFunc()">추가</button>
+
+  <script>
+    function myFunc() {
+      var node = document.createElement("li");
+      var textnode = document.createTextNode('capuuccino');
+      node.appendChild(textnode);
+      document.getElementById("coffeeList").appendChild(node);
+    }
+  </script>
+</body>
+</html>

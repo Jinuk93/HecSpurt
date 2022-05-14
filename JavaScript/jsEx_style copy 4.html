@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    window.onload = function() {
+      //문서를 객체를 추가
+      var output = '';
+      for (var i=0; i<256; i++) {
+        output += '<div></div>';
+      }
+      //문서 객체 내부의 글자를 변경
+      document.body.innerHTML = output;
+      //문서 객체를 선책
+      var divs = document.querySelectorAll('div');
+      for(var i=0; i<divs.length; i++) {
+        var div = divs[i];
+        //스타일 적용
+        div.style.height='2px';
+        div.style.background ='rgb(' +i+ ', ' +i+ ', ' +i+ ')';
+      }
+    };
+
+  </script>
+</body>
+</html>

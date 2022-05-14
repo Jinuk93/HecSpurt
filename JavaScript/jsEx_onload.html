@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+  </head>
+<body>
+  <script>
+  //이벤트 연결
+  window.onload=function() {
+  //문서 객체 선택
+  var header = document.getElementById(`header`);
+
+  //문서 객체 조작
+  header.style.color='orange';
+  header.style.background='red';
+  header.innerHTML='From JavaScript';
+  };
+ </script>
+<h1 id="header">Header</h1>
+</html>

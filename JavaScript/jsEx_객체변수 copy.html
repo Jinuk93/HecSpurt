@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <p id="carname"></p>
+  <p id="carcolor"></p>
+  <p id="carspeed"></p>
+  <script>
+    var car = new Object();
+    car.name ='Sonata';
+    car.speed = 100;
+    car.color='blue';
+    car.speedup = function() {
+      return this.speed+10;
+    };
+    var cname = document.getElementById("carname");
+    cname.textContent='자동차 이름 : ' + car.name;
+
+    var colname = document.getElementById("carcolor");
+    cname.textContent='자동차 색상 : ' + car.color;
+    
+    var cspeed = document.getElementById("carspeed");
+    cname.textContent='자동차 속도 : ' + car.speedup;
+
+  </script>
+</body>
+</html>
