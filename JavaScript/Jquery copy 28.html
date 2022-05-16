@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="Jquery/jquery-3.6.0.js"></script>
+    <script src="Jquery/masonry.pkgd.min.js"></script>
+</head>
+<style>
+    .highlight-0{background; yellow;}
+    .highlight-1{background; orange;}
+    .highlight-2{background; blue;}
+    .highlight-3{background; green;}
+</style>
+<body>
+
+    <h1>item-0</h1>
+    <h1>item-1</h1>
+    <h1>item-2</h1>
+    <h1>item-3</h1>
+
+    <script>
+
+        $(document).ready(function(){
+            $('h1').each(function(index, item) {
+                debugger
+                $(item).addClass('highlight-' + index);
+        });
+    });
+        //$(document).ready(function () {
+            //$('h1').each(function(index, item) {
+            //    debugger
+           //     $(item).addClass('highlight-' + index);
+          // 
+    </script>
+</body>
+</html>

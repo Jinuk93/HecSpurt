@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Jquery/jquery-3.6.0.js"></script>
+</head>
+<style>
+  .moving {
+    border: 1px solid #000000;
+    margin: 20px auto 0 auto;
+    text-align: right;
+    width: 550px;
+  }
+  .moving img {
+    cursor: pointer;
+    position: relative;
+  }
+</style>
+  <script>
+    function move(obj, time) {
+      $(obj).stop().animate({
+        left : -350,
+        top : 0
+      }, time);
+    }
+    function back(css) {
+      $(css).stop().animate({
+        left : 0,
+        top : 0
+      }, time);
+    }
+  </script>
+
+<div class="init">
+  <button type="button" onclick="back('.moving img')">초기상태</button><br>
+</div>
+<div class="moving">
+  <img onclick="move(this, 6000)" src="image/conan.jpg"><br>
+  <img onclick="move(this, 3000)" src="image/rose.jpg"><br>
+  <img onclick="move(this, 1000)" src="image/ran.jpg"><br>
+</div>
+</body>
+
+</html>

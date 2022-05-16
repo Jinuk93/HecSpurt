@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="Jquery/jquery-3.6.0.js"></script>
+    <script src="Jquery/masonry.pkgd.min.js"></script>
+</head>
+<script>
+    function checkForm() {
+       if(document.frm.name.value.length<6 || document.frm.name.value.length > 12) {
+           alert("이름을 6~12자 이내로 입력하세요");
+           document.frm.name.select();
+       }
+    }
+</script>
+<Form name="frm">
+    <p>이름 : <input type="text" name="name">
+    <input type="submit" value="전송" onclick="checkForm()">
+</Form>
+<body>
+
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/lib/jquery-3.6.0.js"></script>
+</head>
+<body>
+
+    <script>
+        $(document).ready(function() {
+            var width = 460;
+            var height = 300;
+            var current = 0;
+            var moveTo = function () {
+                $('.images').animate({
+                    left: -current * width
+                }, 1000);
+            };
+
+            // 슬라이더 내부의 이미지 개수를 확인
+            var imageLength = $('.slider').find('.image').length;
+            alert(imageLength);
+            // 슬라이더 버튼 추가
+            for (let i = 0; i < imageLength; i++) {
+                $('<button></button>')
+                    .attr('data-position', i)
+                    .text(i)
+                    .click(function () {
+                        current = $(this).attr('data-position');
+                        moveTo();
+                    }).insertBefore('.slider');
+            }
+
+            $('.slider').css({
+                position: 'relative',
+                width: width,
+                height: height,
+                overflow: 'hidden'
+            });
+
+            $('.images').css({
+                position: 'absolute',
+                width: width * imageLength
+            });
+
+            $('.image').css({
+                margin: 0,
+                padding: 0,
+                width: width,
+                height: height,
+                display: 'block',
+                float: 'left'
+            });
+
+            // 3초마다 슬라이더를 이동
+            setInterval(function () {
+                current = current + 1;
+                current = current % imageLength;
+                moveTo();
+            }, 3000);
+        });
+    </script>
+
+    <div class="slider">
+        <div class="images">
+            <img src="/imgage/conan.jpg" class="image">
+            <img src="/image/ran.jpg" class="image">
+            <img src="/image/rose.jpg" class="image">
+        </div>
+    </div>
+</body>
+</html>

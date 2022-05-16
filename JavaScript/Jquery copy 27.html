@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="Jquery/jquery-3.6.0.js"></script>
+    <script src="Jquery/masonry.pkgd.min.js"></script>
+</head>
+
+<body>
+    <script>
+        $(document).ready(function () {
+            var array = [
+                { name: 'naver', link: "http://www.naver.com" },
+                { name: 'daum', link: "http://www.daum.net" },
+                { name: 'google', link: "http://www.google.com" }
+            ];
+
+            $.each(array, function (index, item) {
+                var output = '';
+                output += '<a href="' + item.link +'">';
+                output += '<h1>' + item.name + '</h1>';
+                output += '</a>';
+                document.body.innerHTML += output;
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

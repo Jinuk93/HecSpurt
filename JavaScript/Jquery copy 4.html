@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="Jquery/jquery-3.6.0.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img>
+    <script>
+        $(document).ready(function() {
+           //문서 객체를 추가
+           var output = '';
+           for(var i =0; i<256; i++) {
+               output += '<div></div>';
+           }
+           document.body.innerHTML = output;
+
+           //스타일 적용
+           $('div').css({
+               height: 2,
+               backgroundColor: function(i) {
+                   return 'rgb(' + i + ', ' + i + ', ' + i + ')';
+               }
+           })
+        });
+    </script>
+</body>
+</html>
