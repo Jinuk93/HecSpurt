@@ -2,16 +2,15 @@ package org.conan.persistence;
 
 import static org.junit.Assert.assertNotNull;
 
-import javax.naming.spi.DirStateFactory.Result;
-
 import org.conan.config.RootConfig;
 import org.conan.domain.BoardVO;
-import org.conan.servcie.BoardService;
+import org.conan.service.BoardService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
