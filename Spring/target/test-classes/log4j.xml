@@ -11,7 +11,7 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="org.conan.controller">
+	<logger name="com.bio11.myapp">
 		<level value="info" />
 	</logger>
 	
