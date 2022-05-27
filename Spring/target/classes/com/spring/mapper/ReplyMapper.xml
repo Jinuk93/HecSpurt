@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.spring.mapper.ReplyMapper">
+
+
+	<insert id="insert">
+		INSERT INTO tbl_reply(rno ,reply, replyer, bno) VALUES(reply_rno_seq.nextval, #{reply},#{replyer},#{bno})
+	</insert>
+	
+<!-- 	public ReplyVO read(Long rno);
+	
+	public int delete(Long rno);
+	
+	public int update(ReplyVO reply); -->
+	
+	
+	<select id="read" resultType="com.spring.domain.ReplyVO">
+		SELECT * FROM tbl_reply WHERE rno=#{rno}
+	</select>
+	
+	<update id="update">
+		UPDATE tbl_reply SET reply=#{reply}, replyer=#{replyer}, bno=#{bno}, updateDate=sysdate WHERE rno=#{rno}
+	</update>
+	
+	<delete id="delete">
+		DELETE FROM tbl_reply WHERE rno=#{rno}
+	</delete>
+	
+	<select id="getListByBno" resultType="com.spring.domain.ReplyVO">
+		SELECT rno, bno, reply, replyer, replyDate, updateDate FROM tbl_reply
+		WHERE bno=#{bno}
+	</select>
+	
+	<delete id="deleteByBno">
+		DELETE FROM tbl_reply WHERE bno=#{bno}
+	</delete>
+	
+	
+	
+</mapper>

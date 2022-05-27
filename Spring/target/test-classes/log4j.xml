@@ -11,7 +11,7 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="com.bio11.myapp">
+	<logger name="com.spring.bit">
 		<level value="info" />
 	</logger>
 	

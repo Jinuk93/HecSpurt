@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.spring.mapper.BoardMapper">
+	
+	<select id='getList' resultType="com.spring.domain.BoardVO">
+		SELECT * FROM tbl_board WHERE bno > 0
+	</select>
+	
+	<select id='getListWithSearch' resultType="com.spring.domain.BoardVO">
+		SELECT * FROM tbl_board
+		WHERE
+<!-- 	<trim prefix="(" suffix=") AND" prefixOverrides="OR">
+			<foreach item='type' collection="typeArr">
+				<trim prefix="OR">
+					<choose>
+						<when test="type=='T'.toString()">title like '%' || #{keyword}||'%'</when>
+						<when test="type=='C'.toString()">content like '%' || #{keyword}||'%'</when>
+						<when test="type=='W'.toString()">writer like '%' || #{keyword}||'%'</when>
+					</choose>
+				</trim>
+			</foreach>
+		</trim>  -->
+		<include refid="criteria"></include> 
+		bno>0
+	</select>
+
+	
+	<insert id="insert">
+		INSERT INTO tbl_board(bno ,title, content, writer) VALUES(board_bno_seq.nextval, #{title},#{content},#{writer})
+	</insert>
+	
+	<insert id="insertSelectKey">
+		<selectKey keyProperty="bno" order="BEFORE" resultType="long">
+			select board_bno_seq.nextval from dual
+		</selectKey>
+		INSERT INTO tbl_board(bno, title, content, writer)
+		VALUES(#{bno}, #{title}, #{content}, #{writer})
+	</insert>
+	
+	<select id="read" resultType="com.spring.domain.BoardVO">
+		SELECT * FROM tbl_board WHERE bno=#{bno}
+	</select>
+	
+	<update id="update">
+		UPDATE tbl_board SET title=#{title}, content=#{content}, writer=#{writer}, updateDate=sysdate WHERE bno=#{bno}
+	</update>
+	
+	<delete id="delete">
+		DELETE FROM tbl_board WHERE bno=#{bno}
+	</delete>
+	
+	<select id="getTotalCount"  resultType="int">
+		SELECT COUNT(*) FROM tbl_board
+		WHERE
+		<include refid="criteria"></include>
+		bno>0
+	</select>
+	
+	<sql id="criteria">
+		<trim prefix="(" suffix=") AND" prefixOverrides="OR">
+			<foreach item='type' collection="typeArr">
+				<trim prefix="OR">
+					<choose>
+						<when test="type=='T'.toString()">title like '%' || #{keyword}||'%'</when>
+						<when test="type=='C'.toString()">content like '%' || #{keyword}||'%'</when>
+						<when test="type=='W'.toString()">writer like '%' || #{keyword}||'%'</when>
+					</choose>
+				</trim>
+			</foreach>
+		</trim>
+	</sql>
+	
+</mapper>

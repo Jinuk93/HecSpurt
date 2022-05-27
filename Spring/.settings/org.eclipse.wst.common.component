@@ -4,7 +4,7 @@
     
     
     
-    <wb-module deploy-name="myapp-1.0.0-BUILD-SNAPSHOT">
+    <wb-module deploy-name="bit-1.0.0-BUILD-SNAPSHOT">
                                                 
         
         
@@ -35,7 +35,7 @@
         
         
         <property name="java-output-path" value="target/classes"/>
-        <property name="context-root" value="myapp"/>
+        <property name="context-root" value="bit"/>
                                         	
     
     

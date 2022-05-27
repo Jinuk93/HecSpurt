@@ -1,8 +1,0 @@
-org\conan\sample\SampleTest.class
-org\conan\persistence\BoardServiceTest.class
-org\conan\persistence\BoardControllerTest.class
-org\conan\sample\TimeMapperTests.class
-org\conan\persistence\DataSourceTests.class
-org\conan\persistence\BoardMapperTest.class
-org\conan\persistence\JDBCTests.class
-org\conan\sample\HotelTest.class

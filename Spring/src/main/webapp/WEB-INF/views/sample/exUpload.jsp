@@ -1,8 +1,3 @@
-
-
-
-
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -12,11 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form name ="files" method = "post"  >
-	<input type = "file" name = "files">
-	<input type = "file" name = "files">
-	<input type = "file" name = "files">
-	<input type = "submit">
-	</form>
+	<form action="/sample/exUploadPost" enctype="multipart/form-data" method="post">
+   <input type="file" name=files>
+   <input type="file" name=files>
+   <input type="file" name=files>
+   <input type="submit">
+</form>
 </body>
 </html>
