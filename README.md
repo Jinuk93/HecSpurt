@@ -11,7 +11,7 @@
  
 ## ***Basic course*** 
 
- |기간|2022.04.11 - 2022.06.09|
+ |기간|2022.04.11 - 2022.06.06|
  |---|---|
 
 <br>
@@ -31,9 +31,16 @@
 ### ***2️⃣ STEP 2***
 - ***Servlet/JSP, HTML5/CSS3, JavaScript, Ajax/JSON, Node.js, SpringFramework***
 
+|Project|Repository|
+|---|---|
+|TicTacToe|[TicTacToe 1:1](https://github.com/Jinuk93/TicTacToe)|
+
 <br>
 
 ## ***Project course***
 
-|기간|2022.06.10 - 2022.07.29|
+|기간|2022.06.7 - 2022.07.1|
+|---|---|
+
+|기간|2022.07.2 - 2022.07.29|
 |---|---|
