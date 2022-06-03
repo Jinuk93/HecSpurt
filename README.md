@@ -33,7 +33,7 @@
 
 |Project|Repository|
 |---|---|
-|TicTacToe|[TicTacToe 1:1](https://github.com/Jinuk93/TicTacToe)|
+|Fianl|Hecspurt_CProduct|([https://github.com/Jinuk93/TicTacToe](https://github.com/Jinuk93/Hecspurt_CProduct))|
 
 <br>
 
