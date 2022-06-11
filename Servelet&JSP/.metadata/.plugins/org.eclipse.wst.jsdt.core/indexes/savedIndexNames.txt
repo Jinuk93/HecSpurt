@@ -1,8 +1,0 @@
-INDEX VERSION 1.4+F:\HecSpurt_Workspace\Servelet&JSP\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-44181295.index
-2540169407.index
-3932804782.index
-1093687325.index
-2224933566.index
-2682482931.index
-3188039251.index
