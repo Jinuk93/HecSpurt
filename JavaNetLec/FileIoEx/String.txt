@@ -1,4 +1,0 @@
-HelloWorld
-GoodMorning
-Fine
-Thanks
